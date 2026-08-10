@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Alessandro Facchini</title>
 
+    <!-- =========================================================
+         FAVICON
+         ========================================================= -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="AF.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="AF.png">
+    <link rel="apple-touch-icon" href="AF.png">
+
+
     <style>
+
         /* =========================================================
            GENERAL
            ========================================================= */
@@ -82,12 +95,20 @@
             flex: 1;
         }
 
+
+        /* =========================================================
+           MAIN NAME
+           ========================================================= */
+
         h1 {
-            margin: 0 0 5px 0;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 42px;
-            font-weight: 500;
-            letter-spacing: -1px;
+            margin: 0 0 7px 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 46px;
+            font-weight: 400;
+            letter-spacing: -1.5px;
+
             color: #151515;
         }
 
@@ -102,6 +123,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 18px;
+
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
         }
@@ -121,10 +143,12 @@
 
         h2 {
             margin: 0 0 22px 0;
+
             font-family: Arial, Helvetica, sans-serif;
             font-size: 22px;
             font-weight: 500;
             letter-spacing: 0.2px;
+
             color: #222222;
         }
 
@@ -146,11 +170,16 @@
             display: inline-flex;
             align-items: center;
             gap: 9px;
+
             padding: 9px 16px;
+
             border: 1px solid var(--accent);
+
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
+
             color: var(--accent);
+
             transition: all 0.2s ease;
         }
 
@@ -183,12 +212,17 @@
         .abstract-toggle {
             margin-top: 4px;
             margin-left: 0;
+
             padding: 0;
+
             border: none;
             background: none;
+
             color: var(--accent);
+
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
+
             cursor: pointer;
         }
 
@@ -198,14 +232,21 @@
 
         .abstract {
             display: none;
+
             margin-top: 10px;
             margin-left: 0;
+
             padding: 15px 18px;
+
             background: #f7f8fa;
+
             border-left: 3px solid var(--accent);
+
             color: #444444;
+
             font-size: 15px;
             line-height: 1.6;
+
             text-align: justify;
         }
 
@@ -236,8 +277,11 @@
         footer {
             margin-top: 65px;
             padding-top: 20px;
+
             border-top: 1px solid var(--border);
+
             color: #888888;
+
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
         }
@@ -265,7 +309,8 @@
             }
 
             h1 {
-                font-size: 34px;
+                font-size: 36px;
+                letter-spacing: -1px;
             }
 
             .presentation {
@@ -278,10 +323,12 @@
         }
 
     </style>
+
 </head>
 
 
 <body>
+
 
 <div class="container">
 
@@ -303,14 +350,27 @@
             <h1>Alessandro Facchini</h1>
 
             <div class="subtitle">
-                Economist
+                Economics
             </div>
 
             <div class="links">
-                <a href="#research">Research</a>
-                <a href="#cv">CV</a>
-                <a href="#work-in-progress">Work in Progress</a>
-                <a href="#contact">Contact</a>
+
+                <a href="#research">
+                    Research
+                </a>
+
+                <a href="#cv">
+                    CV
+                </a>
+
+                <a href="#work-in-progress">
+                    Work in Progress
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
             </div>
 
         </div>
@@ -350,11 +410,16 @@
 
     <section id="research">
 
-        <h2>Research Interests</h2>
+        <h2>
+            Research Interests
+        </h2>
 
         <p>
+
             <!-- ADD YOUR RESEARCH INTERESTS HERE -->
+
             I will add my research interests here.
+
         </p>
 
     </section>
@@ -367,14 +432,16 @@
 
     <section id="cv">
 
-        <h2>Curriculum Vitae</h2>
+        <h2>
+            Curriculum Vitae
+        </h2>
 
         <a
             class="cv-link"
             href="ALESSANDRO%20FACCHINI%20-%20CV.pdf"
             target="_blank"
         >
-            Download CV&nbsp; → 
+            Download CV&nbsp; →
         </a>
 
     </section>
@@ -387,55 +454,77 @@
 
     <section id="work-in-progress">
 
-        <h2>Work in Progress</h2>
+        <h2>
+            Work in Progress
+        </h2>
 
         <ul class="paper-list">
 
 
-            <!-- PAPER 1 -->
+            <!-- =================================================
+                 PAPER 1
+                 ================================================= -->
 
             <li class="paper">
 
                 <div class="paper-title">
-                    Nonparametric analysis of intertemporal choice and present bias.
+
+                    Nonparametric analysis of intertemporal choice
+                    and present bias.
+
                 </div>
 
                 <button
                     class="abstract-toggle"
                     onclick="toggleAbstract('abstract1', this)"
                 >
+
                     Abstract [+]
+
                 </button>
 
-                <div id="abstract1" class="abstract">
+                <div
+                    id="abstract1"
+                    class="abstract"
+                >
 
-                    This is a placeholder abstract. I will replace this
-                    text with the actual abstract of the paper.
+                    This is a placeholder abstract. I will replace
+                    this text with the actual abstract of the paper.
 
                 </div>
 
             </li>
 
 
-            <!-- PAPER 2 -->
+
+            <!-- =================================================
+                 PAPER 2
+                 ================================================= -->
 
             <li class="paper">
 
                 <div class="paper-title">
+
                     Minimum Wage and Employment.
+
                 </div>
 
                 <button
                     class="abstract-toggle"
                     onclick="toggleAbstract('abstract2', this)"
                 >
+
                     Abstract [+]
+
                 </button>
 
-                <div id="abstract2" class="abstract">
+                <div
+                    id="abstract2"
+                    class="abstract"
+                >
 
-                    This is a placeholder abstract. I will replace this
-                    text with the actual abstract of the paper.
+                    This is a placeholder abstract. I will replace
+                    this text with the actual abstract of the paper.
 
                 </div>
 
@@ -454,16 +543,22 @@
 
     <section id="contact">
 
-        <h2>Contact</h2>
+        <h2>
+            Contact
+        </h2>
 
         <div class="contact">
 
             <a href="mailto:alessandro.facchini@unibocconi.it">
+
                 alessandro.facchini@unibocconi.it
+
             </a>
 
             <a href="mailto:alessandro.facchini@sciencespo.fr">
+
                 alessandro.facchini@sciencespo.fr
+
             </a>
 
         </div>
@@ -486,8 +581,9 @@
 </div>
 
 
+
 <!-- =============================================================
-     JAVASCRIPT FOR EXPANDABLE ABSTRACTS
+     JAVASCRIPT — EXPANDABLE ABSTRACTS
      ============================================================= -->
 
 <script>
@@ -499,9 +595,13 @@
         abstract.classList.toggle("open");
 
         if (abstract.classList.contains("open")) {
+
             button.textContent = "Abstract [−]";
+
         } else {
+
             button.textContent = "Abstract [+]";
+
         }
 
     }
@@ -510,4 +610,5 @@
 
 
 </body>
+
 </html>
