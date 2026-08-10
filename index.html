@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,38 @@
     <title>Alessandro Facchini</title>
 
     <style>
+        /* =========================================================
+           GENERAL
+           ========================================================= */
+
+        :root {
+            --text: #222222;
+            --muted: #666666;
+            --accent: #17365d;
+            --accent-light: #e9eef5;
+            --border: #dddddd;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 30px;
-            line-height: 1.6;
-            color: #222;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            margin-top: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.65;
         }
 
         a {
-            color: #1a4f8b;
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -37,57 +46,468 @@
             text-decoration: underline;
         }
 
-        .subtitle {
-            color: #666;
-            font-size: 18px;
+
+        /* =========================================================
+           MAIN CONTAINER
+           ========================================================= */
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 55px 45px 80px 45px;
         }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 42px;
+            padding-bottom: 42px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .photo {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        h1 {
+            margin: 0 0 5px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: -1px;
+            color: #151515;
+        }
+
+        .subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: var(--accent);
+        }
+
+
+        /* =========================================================
+           SECTIONS
+           ========================================================= */
+
+        section {
+            margin-top: 48px;
+        }
+
+        h2 {
+            margin: 0 0 22px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            color: #222222;
+        }
+
+        .presentation {
+            max-width: 850px;
+            text-align: justify;
+        }
+
+        .presentation p {
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           CV
+           ========================================================= */
+
+        .cv-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 16px;
+            border: 1px solid var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: var(--accent);
+            transition: all 0.2s ease;
+        }
+
+        .cv-link:hover {
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           WORK IN PROGRESS
+           ========================================================= */
+
+        .paper-list {
+            padding-left: 22px;
+            margin-top: 0;
+        }
+
+        .paper {
+            margin-bottom: 24px;
+            padding-left: 3px;
+        }
+
+        .paper-title {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .abstract-toggle {
+            margin-top: 4px;
+            margin-left: 0;
+            padding: 0;
+            border: none;
+            background: none;
+            color: var(--accent);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .abstract-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .abstract {
+            display: none;
+            margin-top: 10px;
+            margin-left: 0;
+            padding: 15px 18px;
+            background: #f7f8fa;
+            border-left: 3px solid var(--accent);
+            color: #444444;
+            font-size: 15px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .abstract.open {
+            display: block;
+        }
+
+
+        /* =========================================================
+           CONTACT
+           ========================================================= */
+
+        .contact {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .contact a {
+            display: block;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        footer {
+            margin-top: 65px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: #888888;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 35px 25px 60px 25px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
+            .photo {
+                width: 135px;
+                height: 135px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .presentation {
+                text-align: left;
+            }
+
+            .abstract {
+                text-align: left;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <h1>Alessandro Facchini</h1>
+<div class="container">
 
-    <div class="subtitle">
-        PhD Student in Economics
-    </div>
 
-    <p>
-        I am a PhD student in Economics at UCEMA.
-        My research interests include labor economics,
-        political economy, and development economics.
-    </p>
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
 
-    <h2>Research</h2>
+    <header>
 
-    <p>
-        My research focuses on ...
-    </p>
+        <img
+            src="photo_face.jpg"
+            alt="Alessandro Facchini"
+            class="photo"
+        >
 
-    <h2>Education</h2>
+        <div class="header-text">
 
-    <p>
-        <strong>UCEMA</strong><br>
-        PhD in Economics
-    </p>
+            <h1>Alessandro Facchini</h1>
 
-    <p>
-        <strong>Sciences Po</strong><br>
-        Master in Economics and Public Policy
-    </p>
+            <div class="subtitle">
+                Economist
+            </div>
 
-    <h2>CV</h2>
+            <div class="links">
+                <a href="#research">Research</a>
+                <a href="#cv">CV</a>
+                <a href="#work-in-progress">Work in Progress</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-    <p>
-        <a href="ALESSANDRO FACCHINI - CV.pdf">Download my CV</a>
-    </p>
+        </div>
 
-    <h2>Contact</h2>
+    </header>
 
-    <p>
-        Email: your.email@example.com
-    </p>
+
+
+    <!-- =========================================================
+         PRESENTATION
+         ========================================================= -->
+
+    <section class="presentation">
+
+        <p>
+            As a student of Economics and Public Policy, I have developed
+            a strong combination of quantitative rigor and a deep
+            understanding of social dynamics. My academic background has
+            strengthened my analytical abilities through advanced studies
+            in economics, mathematics, statistics, and data science, while
+            also broadening my perspective through the humanities, including
+            philosophy and literature. I have practical experience in
+            economic and econometric research, conducting data analysis and
+            contributing to academic papers. Driven by intellectual curiosity
+            and a commitment to continuous learning, I aim to keep applying
+            my knowledge to study complex economic phenomena and to contribute
+            to addressing global challenges.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         RESEARCH
+         ========================================================= -->
+
+    <section id="research">
+
+        <h2>Research Interests</h2>
+
+        <p>
+            <!-- ADD YOUR RESEARCH INTERESTS HERE -->
+            I will add my research interests here.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CV
+         ========================================================= -->
+
+    <section id="cv">
+
+        <h2>Curriculum Vitae</h2>
+
+        <a
+            class="cv-link"
+            href="ALESSANDRO%20FACCHINI%20-%20CV.pdf"
+            target="_blank"
+        >
+            Download CV&nbsp; → 
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         WORK IN PROGRESS
+         ========================================================= -->
+
+    <section id="work-in-progress">
+
+        <h2>Work in Progress</h2>
+
+        <ul class="paper-list">
+
+
+            <!-- PAPER 1 -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+                    Nonparametric analysis of intertemporal choice and present bias.
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('abstract1', this)"
+                >
+                    Abstract [+]
+                </button>
+
+                <div id="abstract1" class="abstract">
+
+                    This is a placeholder abstract. I will replace this
+                    text with the actual abstract of the paper.
+
+                </div>
+
+            </li>
+
+
+            <!-- PAPER 2 -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+                    Minimum Wage and Employment.
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('abstract2', this)"
+                >
+                    Abstract [+]
+                </button>
+
+                <div id="abstract2" class="abstract">
+
+                    This is a placeholder abstract. I will replace this
+                    text with the actual abstract of the paper.
+
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="contact">
+
+            <a href="mailto:alessandro.facchini@unibocconi.it">
+                alessandro.facchini@unibocconi.it
+            </a>
+
+            <a href="mailto:alessandro.facchini@sciencespo.fr">
+                alessandro.facchini@sciencespo.fr
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        © 2026 Alessandro Facchini
+
+    </footer>
+
+
+</div>
+
+
+<!-- =============================================================
+     JAVASCRIPT FOR EXPANDABLE ABSTRACTS
+     ============================================================= -->
+
+<script>
+
+    function toggleAbstract(id, button) {
+
+        const abstract = document.getElementById(id);
+
+        abstract.classList.toggle("open");
+
+        if (abstract.classList.contains("open")) {
+            button.textContent = "Abstract [−]";
+        } else {
+            button.textContent = "Abstract [+]";
+        }
+
+    }
+
+</script>
+
 
 </body>
-
 </html>
