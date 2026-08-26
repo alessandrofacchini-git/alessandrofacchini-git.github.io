@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alessandro Facchini</title>
+
+    <meta name="description"
+          content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+
+    <meta property="og:site_name" content="Alessandro Facchini">
+    <meta property="og:title" content="Alessandro Facchini">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alessandrofacchini-git.github.io/">
+
+    <!-- =========================================================
+         SITE IDENTITY
+         ========================================================= -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Alessandro Facchini",
+        "alternateName": "Alessandro Facchini",
+        "url": "https://alessandrofacchini-git.github.io/"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alessandro Facchini",
+        "url": "https://alessandrofacchini-git.github.io/",
+        "image": "https://alessandrofacchini-git.github.io/6550face.JPG",
+        "sameAs": [
+            "https://www.linkedin.com/in/alessandro-facchini-6b2490238/"
+        ]
+    }
+    </script>
+
+
+    <!-- =========================================================
+         FAVICON
+         ========================================================= -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="AF.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="AF.png">
+    <link rel="apple-touch-icon" href="AF.png">
+
+
+    <style>
+
+        /* =========================================================
+           GENERAL
+           ========================================================= */
+
+        :root {
+            --text: #222222;
+            --muted: #666666;
+            --accent: #17365d;
+            --accent-light: #e9eef5;
+            --border: #dddddd;
+            --background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--background);
+            color: var(--text);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           MAIN CONTAINER
+           ========================================================= */
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 55px 45px 80px 45px;
+        }
+
+
+        /* =========================================================
+           HEADER
+           ========================================================= */
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 42px;
+            padding-bottom: 42px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .photo {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+
+        /* =========================================================
+           MAIN NAME
+           ========================================================= */
+
+        h1 {
+            margin: 0 0 7px 0;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 46px;
+            font-weight: 400;
+            letter-spacing: -1.5px;
+
+            color: #151515;
+        }
+
+        .subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: var(--accent);
+        }
+
+
+        /* =========================================================
+           SECTIONS
+           ========================================================= */
+
+        section {
+            margin-top: 48px;
+        }
+
+        h2 {
+            margin: 0 0 22px 0;
+
+            font-family: "Palatino Linotype", Palatino, Georgia, serif;
+            font-size: 23px;
+            font-weight: 600;
+            letter-spacing: 0px;
+
+            color: #222222;
+        }
+
+        .presentation {
+            max-width: 850px;
+            text-align: justify;
+        }
+
+        .presentation p {
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           CV
+           ========================================================= */
+
+        .cv-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 9px 16px;
+
+            border: 1px solid var(--accent);
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+
+            color: var(--accent);
+
+            transition: all 0.2s ease;
+        }
+
+        .cv-link:hover {
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           RESEARCH CONTRIBUTIONS / WORK IN PROGRESS
+           ========================================================= */
+
+        .paper-list {
+            padding-left: 22px;
+            margin-top: 0;
+        }
+
+        .paper {
+            margin-bottom: 24px;
+            padding-left: 3px;
+        }
+
+        .paper-title {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .abstract-toggle {
+            margin-top: 4px;
+            margin-left: 0;
+
+            padding: 0;
+
+            border: none;
+            background: none;
+
+            color: var(--accent);
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+
+            cursor: pointer;
+        }
+
+        .abstract-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .abstract {
+            display: none;
+
+            margin-top: 10px;
+            margin-left: 0;
+
+            padding: 15px 18px;
+
+            background: #f7f8fa;
+
+            border-left: 3px solid var(--accent);
+
+            color: #444444;
+
+            font-size: 15px;
+            line-height: 1.6;
+
+            text-align: justify;
+        }
+
+        .abstract.open {
+            display: block;
+        }
+
+
+        /* =========================================================
+           CONTACT
+           ========================================================= */
+
+        .contact {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .contact a {
+            display: block;
+        }
+
+
+        /* =========================================================
+           FOOTER / SOCIAL LINKS
+           ========================================================= */
+
+        footer {
+            margin-top: 65px;
+            padding-top: 25px;
+
+            border-top: 1px solid var(--border);
+
+            color: #888888;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 13px;
+
+            border: 1px solid #d2d7dd;
+            border-radius: 3px;
+
+            background: #ffffff;
+
+            color: #444444;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+
+            transition: all 0.2s ease;
+        }
+
+        .footer-button:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+
+            text-decoration: none;
+            background: #fafbfd;
+        }
+
+        .footer-icon {
+            width: 16px;
+            height: 16px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .copyright {
+            color: #888888;
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 35px 25px 60px 25px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
+            .photo {
+                width: 135px;
+                height: 135px;
+            }
+
+            h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            .presentation {
+                text-align: left;
+            }
+
+            .abstract {
+                text-align: left;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header>
+
+        <img
+            src="6550face.JPG"
+            alt="Alessandro Facchini"
+            class="photo"
+        >
+
+        <div class="header-text">
+
+            <h1>Alessandro Facchini</h1>
+
+            <div class="subtitle">
+                Economics
+            </div>
+
+            <div class="links">
+
+                <a href="#research">
+                    Research
+                </a>
+
+                <a href="#cv">
+                    CV
+                </a>
+
+                <a href="#work-in-progress">
+                    Work in Progress
+                </a>
+
+                <a href="#research-contributions">
+                    Research Contributions
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         PRESENTATION
+         ========================================================= -->
+
+    <section class="presentation">
+
+        <p>
+            Hi, I’m Alessandro! I have a background in economics and public policy and experience in academic and policy-oriented research.
+            My work has involved economic and econometric analysis, large-scale data, and interdisciplinary research across academic and institutional settings.
+            I enjoy combining quantitative methods with a broader perspective on how individuals, institutions, and societies function,
+            and I am motivated by research that contributes to a better understanding of real-world economic and social challenges.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         RESEARCH
+         ========================================================= -->
+
+    <section id="research">
+
+        <h2>
+            Research Interests
+        </h2>
+
+        <p>
+            My research interests span behavioral economics, decision-making,
+            labor economics, and public policy. I am interested in using
+            economic theory and quantitative methods to study how individuals
+            and institutions make decisions and how these decisions shape
+            economic outcomes and inequality. I combine econometric methodology
+            with large-scale data to test economic theories and evaluate
+            policy-relevant questions, with an emphasis on methods that rely
+            on relatively few assumptions. My work includes both methodological
+            research on revealed preference, rationality, and nonparametric
+            inference, and applied research on labor markets, firms, inequality,
+            and public policy.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CV
+         ========================================================= -->
+
+    <section id="cv">
+
+        <h2>
+            Curriculum Vitae
+        </h2>
+
+        <a
+            class="cv-link"
+            href="ALESSANDRO%20FACCHINI%20-%20CV.pdf"
+            target="_blank"
+        >
+            See CV&nbsp; →
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         WORK IN PROGRESS
+         ========================================================= -->
+
+    <section id="work-in-progress">
+
+        <h2>
+            Work in Progress
+        </h2>
+
+        <ul class="paper-list">
+
+
+            <!-- =================================================
+                 PAPER 1
+                 ================================================= -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+
+                    Disentangling Rationality: A Nonparametric Approach to Intertemporal Choice, Self-Control, and Present Bias
+
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('abstract1', this)"
+                >
+
+                    Abstract [+]
+
+                </button>
+
+                <div
+                    id="abstract1"
+                    class="abstract"
+                >
+
+                    Why do individuals sometimes act differently from what they previously
+                    intended — procrastinating on unpleasant tasks, changing saving or spending
+                    decisions as the future becomes the present, or making different choices
+                    about food, substance use, or digital media than they had planned?
+                    Behavioral economics often attributes such behavior to <em>present
+                    bias</em>: a tendency to place disproportionate weight on immediate
+                    rewards. Yet apparent impatience can also arise from uncertainty,
+                    liquidity constraints, the curvature of costs and rewards, aggregation,
+                    or unobserved and time-varying preferences. The central question is
+                    therefore: <strong>how much of observed time-inconsistency reflects
+                    genuine self-control problems, and how much reflects other features of
+                    the decision environment?</strong>
+
+                    This paper develops a nonparametric framework for disentangling these
+                    explanations and studying intertemporal rationality with minimal
+                    assumptions on preferences and behavior. It combines revealed-preference
+                    theory with experimental, quasi-experimental, and panel variation across
+                    multiple domains of intertemporal choice, using multi-vantage designs
+                    and exogenous variation to separate genuine time-inconsistency from
+                    observationally similar mechanisms. To account for measurement error,
+                    stochastic choices, and unobserved preference variation, the framework
+                    combines nonparametric bounds, latent-variable integration, and
+                    conditional moment inequalities to test whether observed behavior can
+                    be rationalized by alternative models without imposing restrictive
+                    functional forms or mechanically treating noisy choices as irrational.
+
+                    The framework provides a way to ask <strong>when observed impatience is
+                    evidence of present bias, when it is not, and what revealed choices can
+                    tell us about self-control</strong>. It also allows present bias to be
+                    understood not necessarily as a fixed individual trait, but as a
+                    potentially state- and context-dependent feature of decision-making—
+                    an interpretation with implications for how behavioral biases are
+                    measured, how welfare is assessed, and how choice environments are
+                    designed.
+
+                </div>
+
+            </li>
+
+
+
+            <!-- =================================================
+                 PAPER 2
+                 ================================================= -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+
+                    Inequality of Opportunity: Early Education, Life-Course Trajectories, and Public Policy
+
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('abstract2', this)"
+                >
+
+                    Abstract [+]
+
+                </button>
+
+                <div
+                    id="abstract2"
+                    class="abstract"
+                >
+                
+                    Why do inequalities that emerge early in life persist — and at which points
+                    can public policy meaningfully change their trajectories? This paper
+                    studies how family background, educational environments, and institutional
+                    access shape inequality of opportunity over the life course, and how policy
+                    interventions can alter these trajectories.
+                
+                    Using rich individual-level and administrative data from Chile, the
+                    analysis first maps how early-life circumstances translate into differences
+                    in educational progression and later outcomes. It then exploits institutional
+                    reforms generating quasi-random variation in educational resources,
+                    instructional time, and school access. Regression discontinuity, staggered
+                    difference-in-differences, event-study designs, and lottery-based assignment
+                    are used to identify causal effects and examine how they vary across
+                    students, schools, and socioeconomic backgrounds.
+                
+                    The broader contribution is to connect the structure of inequality with its
+                    causal mechanisms: identifying where and how disadvantage accumulates, and
+                    which policy margins can most effectively alter these trajectories. By
+                    combining life-course analysis with rigorous causal inference, the project
+                    aims to move beyond documenting disparities toward understanding when,
+                    where, and for whom policy can expand opportunities and break persistent
+                    cycles of disadvantage.
+                
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         RESEARCH CONTRIBUTIONS
+         ========================================================= -->
+
+    <section id="research-contributions">
+
+        <h2>
+            Research Contributions
+        </h2>
+
+        <ul class="paper-list">
+
+
+            <!-- =================================================
+                 CONTRIBUTION 1
+                 ================================================= -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+
+                    Contribution title 1.
+
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('contribution1', this)"
+                >
+
+                    Abstract [+]
+
+                </button>
+
+                <div
+                    id="contribution1"
+                    class="abstract"
+                >
+
+                    Description-1.
+
+                </div>
+
+            </li>
+
+
+
+            <!-- =================================================
+                 CONTRIBUTION 2
+                 ================================================= -->
+
+            <li class="paper">
+
+                <div class="paper-title">
+
+                    Contribution title 2.
+
+                </div>
+
+                <button
+                    class="abstract-toggle"
+                    onclick="toggleAbstract('contribution2', this)"
+                >
+
+                    Abstract [+]
+
+                </button>
+
+                <div
+                    id="contribution2"
+                    class="abstract"
+                >
+
+                    Description-2.
+
+                </div>
+
+            </li>
+
+
+        </ul>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
+    <section id="contact">
+
+        <h2>
+            Contact
+        </h2>
+
+        <div class="contact">
+
+            <a href="mailto:alessandro.facchini@unibocconi.it">
+
+                alessandro.facchini@unibocconi.it
+
+            </a>
+
+            <a href="mailto:alessandro.facchini@sciencespo.fr">
+
+                alessandro.facchini@sciencespo.fr
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="footer-links">
+
+            <!-- EMAIL -->
+
+            <a
+                class="footer-button"
+                href="mailto:alessandro.facchini@unibocconi.it"
+            >
+
+                <span class="footer-icon">
+                    ✉
+                </span>
+
+                Email
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a
+                class="footer-button"
+                href="https://www.linkedin.com/in/alessandro-facchini-6b2490238/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span class="footer-icon">
+                    in
+                </span>
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Alessandro Facchini
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- =============================================================
+     JAVASCRIPT — EXPANDABLE ABSTRACTS
+     ============================================================= -->
+
+<script>
+
+    function toggleAbstract(id, button) {
+
+        const abstract = document.getElementById(id);
+
+        abstract.classList.toggle("open");
+
+        if (abstract.classList.contains("open")) {
+
+            button.textContent = "Abstract [−]";
+
+        } else {
+
+            button.textContent = "Abstract [+]";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

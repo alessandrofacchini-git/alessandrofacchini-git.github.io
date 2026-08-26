@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alessandro Facchini — Economics</title>
+<meta name="description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta name="author" content="Alessandro Facchini">
+<meta name="theme-color" content="#12556B">
+<link rel="canonical" href="https://alessandrofacchini-git.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Alessandro Facchini">
+<meta property="og:title" content="Alessandro Facchini — Economics">
+<meta property="og:description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta property="og:url" content="https://alessandrofacchini-git.github.io/">
+<meta property="og:image" content="https://alessandrofacchini-git.github.io/assets/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alessandro Facchini — Economics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alessandro Facchini — Economics">
+<meta name="twitter:description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta name="twitter:image" content="https://alessandrofacchini-git.github.io/assets/og-card.png">
+
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alessandro Facchini",
+  "givenName": "Alessandro",
+  "familyName": "Facchini",
+  "jobTitle": "Economist",
+  "url": "https://alessandrofacchini-git.github.io/",
+  "image": "https://alessandrofacchini-git.github.io/assets/portrait.jpg",
+  "email": "mailto:alessandro.facchini@unibocconi.it",
+  "knowsAbout": ["Behavioral economics", "Labor economics", "Public policy",
+                 "Econometrics", "Revealed preference", "Nonparametric inference"],
+  "sameAs": ["https://www.linkedin.com/in/alessandro-facchini-6b2490238/"]
+}
+</script>
+<style>
+
+:root{
+  --bg:#FFFFFF; --panel:#F6F8FA; --ink:#0E161D; --ink-2:#333F4A;
+  --muted:#66727E; --rule:#E3E9EE; --rule-2:#EDF1F5;
+  --accent:#12556B; --accent-2:#0C3F51; --accent-soft:#E9F2F5;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --rail:308px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;color-scheme:light light}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;background:var(--bg);color:var(--ink-2);
+  font-family:var(--serif);font-size:18px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block}
+[hidden]{display:none!important}
+.ic{width:1.05em;height:1.05em;flex:0 0 auto}
+.ic-sm{width:.8em;height:.8em}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-9999px;background:var(--accent);color:#fff;padding:10px 16px;
+  font-family:var(--sans);font-size:14px;z-index:99}
+.skip:focus{left:12px;top:12px}
+
+.shell{max-width:1220px;margin:0 auto;padding:0 44px;
+  display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:76px;align-items:start}
+.shell>*{min-width:0}
+
+/* ---------------------------------------------------------------- rail --- */
+.rail{position:sticky;top:0;padding:56px 0 40px;max-height:100vh;overflow:auto;
+  overscroll-behavior:contain;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.portrait{width:150px;height:150px;border-radius:9px;object-fit:cover;
+  box-shadow:0 0 0 1px var(--rule),0 16px 32px -22px rgba(14,22,29,.55)}
+.rail h1{margin:24px 0 0;font-family:var(--sans);font-weight:600;font-size:29px;
+  line-height:1.15;letter-spacing:-.028em;color:var(--ink)}
+.role{margin:9px 0 0;font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.rail-div{height:1px;background:var(--rule);margin:26px 0}
+
+.railnav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.railnav a{display:block;padding:7px 0 7px 15px;border-left:2px solid var(--rule);
+  font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--muted);
+  transition:color .18s ease,border-color .18s ease}
+.railnav a:hover{color:var(--ink);text-decoration:none;border-left-color:var(--muted)}
+.railnav a.is-current{color:var(--accent);border-left-color:var(--accent);font-weight:600}
+
+.rail-actions{display:flex;flex-direction:column;gap:9px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:10px 15px;border-radius:6px;
+  font-family:var(--sans);font-size:13.5px;font-weight:500;
+  white-space:nowrap;
+  border:1px solid var(--accent);background:var(--accent);color:#fff;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+.btn:hover{background:var(--accent-2);border-color:var(--accent-2);text-decoration:none;
+  box-shadow:0 6px 16px -10px rgba(12,63,81,.9)}
+.btn-ghost{background:#fff;color:var(--ink-2);border-color:var(--rule)}
+.btn-ghost:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);
+  box-shadow:none}
+.btn .ic-sm{margin-left:auto;opacity:.6}
+
+/* -------------------------------------------------------------- content -- */
+.content{padding:56px 0 0;max-width:720px}
+.lede{margin:0;font-size:20.5px;line-height:1.65;color:var(--ink)}
+section{margin-top:56px;scroll-margin-top:28px}
+.sec-head{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.sec-head::before{content:"";width:4px;height:19px;background:var(--accent);border-radius:2px;flex:0 0 auto}
+h2{margin:0;font-family:var(--sans);font-weight:600;font-size:21px;letter-spacing:-.018em;color:var(--ink)}
+.prose p{margin:0 0 18px}
+.prose p:last-child{margin-bottom:0}
+.prose p,.abstract p,.lede{text-wrap:pretty}
+
+/* --------------------------------------------------------------- cards --- */
+.papers{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.paper{border:1px solid var(--rule);border-radius:11px;background:#fff;padding:24px 26px;
+  transition:border-color .2s ease,box-shadow .2s ease}
+.paper:hover{border-color:#CFDBE2;box-shadow:0 10px 30px -24px rgba(14,22,29,.8)}
+.tag{display:inline-block;margin-bottom:11px;padding:3px 9px;border-radius:20px;
+  background:var(--accent-soft);color:var(--accent);
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase}
+.paper-title{margin:0;font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.4;
+  letter-spacing:-.005em;color:var(--ink)}
+.toggle{display:inline-flex;align-items:center;gap:7px;margin-top:13px;padding:5px 0;
+  border:0;background:none;cursor:pointer;color:var(--accent);
+  font-family:var(--sans);font-size:13px;font-weight:500}
+.toggle:hover{text-decoration:underline;text-underline-offset:3px}
+.chev{width:14px;height:14px;transition:transform .22s ease}
+.toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.abstract{margin-top:15px;padding-top:17px;border-top:1px solid var(--rule-2);
+  font-size:16.5px;line-height:1.68}
+.abstract p{margin:0 0 14px}
+.abstract p:last-child{margin-bottom:0}
+.abstract strong{font-weight:600;color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){
+  .abstract{animation:reveal .28s ease both}
+  @keyframes reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+}
+
+/* ------------------------------------------------------------- contact --- */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.contact-card{display:flex;align-items:center;gap:13px;padding:16px 18px;border-radius:10px;
+  background:var(--panel);border:1px solid var(--rule-2);color:var(--ink);
+  font-family:var(--sans);font-size:14.5px;transition:border-color .2s ease,background .2s ease}
+.contact-card:hover{background:#fff;border-color:var(--accent);color:var(--accent);text-decoration:none}
+.contact-card .ic{width:19px;height:19px;color:var(--accent)}
+
+/* -------------------------------------------------------------- footer --- */
+footer{margin-top:70px;border-top:1px solid var(--rule);padding:24px 0 52px;
+  font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+
+/* --------------------------------------------------------- mobile rail --- */
+.topnav{display:none}
+@media (max-width:1040px){
+  .shell{grid-template-columns:1fr;gap:0;padding:0 30px;max-width:760px}
+  .rail{position:static;max-height:none;overflow:visible;padding:44px 0 0;
+    display:grid;grid-template-columns:auto 1fr;gap:0 26px;align-items:center}
+  .portrait{width:112px;height:112px;grid-row:span 2}
+  .rail h1{margin:0;font-size:clamp(26px,6vw,33px)}
+  .rail .role{grid-column:2}
+  .rail-div,.railnav{display:none}
+  .rail-actions{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;margin-top:24px}
+  .btn .ic-sm{margin-left:0}
+  .topnav{display:block;position:sticky;top:0;z-index:20;margin-top:28px;
+    background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);
+    -webkit-backdrop-filter:saturate(180%) blur(10px);
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .topnav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0 26px 0 0;
+    overflow-x:auto;scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 34px),transparent);
+    mask-image:linear-gradient(90deg,#000 calc(100% - 34px),transparent)}
+  .topnav ul::-webkit-scrollbar{display:none}
+  .topnav a{display:block;padding:13px 0;white-space:nowrap;border-bottom:2px solid transparent;
+    margin-bottom:-1px;font-family:var(--sans);font-size:12.5px;font-weight:500;
+    letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  .topnav a:hover{color:var(--ink);text-decoration:none}
+  .topnav a.is-current{color:var(--accent);border-bottom-color:var(--accent)}
+  .content{padding-top:8px;max-width:none}
+  section{scroll-margin-top:70px}
+  .lede{font-size:19px;margin-top:40px}
+}
+@media (max-width:520px){
+  .shell{padding:0 22px}
+  .rail{grid-template-columns:1fr;gap:0}
+  .portrait{grid-row:auto;width:118px;height:118px}
+  .rail h1{margin-top:20px}
+  .rail .role{grid-column:1}
+  .paper{padding:20px 18px}
+  .rail-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .rail-actions .btn{justify-content:center}
+  .rail-actions .btn:first-child{grid-column:1/-1}
+  .rail-actions .btn .ic-sm{display:none}
+}
+
+@media print{
+  .rail-actions,.railnav,.topnav,.toggle,.skip{display:none!important}
+  .shell{display:block;max-width:none;padding:0}
+  body{background:#fff;color:#000;font-size:11pt}
+  .abstract{display:block!important}
+  .paper{border:none;padding:0;page-break-inside:avoid}
+  a{color:#000}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <aside class="rail">
+    <img class="portrait" src="../assets/portrait.jpg"
+         alt="Portrait of Alessandro Facchini" width="150" height="150">
+    <h1>Alessandro Facchini</h1>
+    <p class="role">Economics</p>
+
+    <div class="rail-div"></div>
+
+    <nav class="railnav" data-nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research Interests</a></li>
+        <li><a href="#work-in-progress">Work in Progress</a></li>
+        <li><a href="#contributions">Research Contributions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="rail-div"></div>
+
+    <div class="rail-actions">
+      <a class="btn" href="../ALESSANDRO%20FACCHINI%20-%20CV.pdf" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H7.5A2 2 0 0 0 5.5 4.5v15a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7.5z"/><path d="M14 2.5v5h4.5M9 13h6M9 16.5h4"/></svg>Curriculum Vitae<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M9.5 7.5h7v7"/></svg></a>
+      <a class="btn btn-ghost" href="mailto:alessandro.facchini@unibocconi.it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2.2"/><path d="m3.4 6.6 8.6 6.2 8.6-6.2"/></svg>Email</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/alessandro-facchini-6b2490238/" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3.2 9h3.6v12H3.2zM9.3 9h3.45v1.64h.05c.48-.9 1.65-1.85 3.4-1.85 3.63 0 4.3 2.39 4.3 5.5V21h-3.6v-5.36c0-1.28-.02-2.92-1.78-2.92-1.78 0-2.05 1.39-2.05 2.83V21H9.3z"/></svg>LinkedIn<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M9.5 7.5h7v7"/></svg></a>
+    </div>
+  </aside>
+
+  <div>
+    <nav class="topnav" data-nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research Interests</a></li>
+        <li><a href="#work-in-progress">Work in Progress</a></li>
+        <li><a href="#contributions">Research Contributions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="content">
+
+      <section id="about" style="margin-top:0">
+        <p class="lede">Hi, I’m Alessandro! I have a background in economics and public policy and experience in academic and policy-oriented research. My work has involved economic and econometric analysis, large-scale data, and interdisciplinary research across academic and institutional settings. I enjoy combining quantitative methods with a broader perspective on how individuals, institutions, and societies function, and I am motivated by research that contributes to a better understanding of real-world economic and social challenges.</p>
+      </section>
+
+      <section id="research">
+        <div class="sec-head"><h2>Research Interests</h2></div>
+        <div class="prose"><p>My research interests span behavioral economics, decision-making, labor economics, and public policy. I am interested in using economic theory and quantitative methods to study how individuals and institutions make decisions and how these decisions shape economic outcomes and inequality. I combine econometric methodology with large-scale data to test economic theories and evaluate policy-relevant questions, with an emphasis on methods that rely on relatively few assumptions. My work includes both methodological research on revealed preference, rationality, and nonparametric inference, and applied research on labor markets, firms, inequality, and public policy.</p></div>
+      </section>
+
+      <section id="work-in-progress">
+        <div class="sec-head"><h2>Work in Progress</h2></div>
+        <ul class="papers">
+        <li class="paper">
+          <span class="tag">Work in progress</span>
+          <h3 class="paper-title">Disentangling Rationality: A Nonparametric Approach to Intertemporal Choice, Self-Control, and Present Bias</h3>
+          <button class="toggle" type="button" data-abstract-toggle
+                  aria-expanded="false" aria-controls="wip-1">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
+          </button>
+          <div class="abstract" id="wip-1" hidden>
+            <p>Why do individuals sometimes act differently from what they previously intended — procrastinating on unpleasant tasks, changing saving or spending decisions as the future becomes the present, or making different choices about food, substance use, or digital media than they had planned? Behavioral economics often attributes such behavior to <em>present bias</em>: a tendency to place disproportionate weight on immediate rewards. Yet apparent impatience can also arise from uncertainty, liquidity constraints, the curvature of costs and rewards, aggregation, or unobserved and time-varying preferences. The central question is therefore: <strong>how much of observed time-inconsistency reflects genuine self-control problems, and how much reflects other features of the decision environment?</strong></p>
+            <p>This paper develops a nonparametric framework for disentangling these explanations and studying intertemporal rationality with minimal assumptions on preferences and behavior. It combines revealed-preference theory with experimental, quasi-experimental, and panel variation across multiple domains of intertemporal choice, using multi-vantage designs and exogenous variation to separate genuine time-inconsistency from observationally similar mechanisms. To account for measurement error, stochastic choices, and unobserved preference variation, the framework combines nonparametric bounds, latent-variable integration, and conditional moment inequalities to test whether observed behavior can be rationalized by alternative models without imposing restrictive functional forms or mechanically treating noisy choices as irrational.</p>
+            <p>The framework provides a way to ask <strong>when observed impatience is evidence of present bias, when it is not, and what revealed choices can tell us about self-control</strong>. It also allows present bias to be understood not necessarily as a fixed individual trait, but as a potentially state- and context-dependent feature of decision-making — an interpretation with implications for how behavioral biases are measured, how welfare is assessed, and how choice environments are designed.</p>
+          </div>
+        </li>
+        <li class="paper">
+          <span class="tag">Work in progress</span>
+          <h3 class="paper-title">Inequality of Opportunity: Early Education, Life-Course Trajectories, and Public Policy</h3>
+          <button class="toggle" type="button" data-abstract-toggle
+                  aria-expanded="false" aria-controls="wip-2">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
+          </button>
+          <div class="abstract" id="wip-2" hidden>
+            <p>Why do inequalities that emerge early in life persist — and at which points can public policy meaningfully change their trajectories? This paper studies how family background, educational environments, and institutional access shape inequality of opportunity over the life course, and how policy interventions can alter these trajectories.</p>
+            <p>Using rich individual-level and administrative data from Chile, the analysis first maps how early-life circumstances translate into differences in educational progression and later outcomes. It then exploits institutional reforms generating quasi-random variation in educational resources, instructional time, and school access. Regression discontinuity, staggered difference-in-differences, event-study designs, and lottery-based assignment are used to identify causal effects and examine how they vary across students, schools, and socioeconomic backgrounds.</p>
+            <p>The broader contribution is to connect the structure of inequality with its causal mechanisms: identifying where and how disadvantage accumulates, and which policy margins can most effectively alter these trajectories. By combining life-course analysis with rigorous causal inference, the project aims to move beyond documenting disparities toward understanding when, where, and for whom policy can expand opportunities and break persistent cycles of disadvantage.</p>
+          </div>
+        </li>
+        </ul>
+      </section>
+
+      <section id="contributions">
+        <div class="sec-head"><h2>Research Contributions</h2></div>
+        <ul class="papers">
+        <li class="paper">
+          <span class="tag">Contribution</span>
+          <h3 class="paper-title">Contribution title 1.</h3>
+          <button class="toggle" type="button" data-abstract-toggle
+                  aria-expanded="false" aria-controls="con-1">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
+          </button>
+          <div class="abstract" id="con-1" hidden>
+            <p>Description-1.</p>
+          </div>
+        </li>
+        <li class="paper">
+          <span class="tag">Contribution</span>
+          <h3 class="paper-title">Contribution title 2.</h3>
+          <button class="toggle" type="button" data-abstract-toggle
+                  aria-expanded="false" aria-controls="con-2">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
+          </button>
+          <div class="abstract" id="con-2" hidden>
+            <p>Description-2.</p>
+          </div>
+        </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head"><h2>Contact</h2></div>
+        <div class="contact-grid">
+        <a class="contact-card" href="mailto:alessandro.facchini@unibocconi.it"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2.2"/><path d="m3.4 6.6 8.6 6.2 8.6-6.2"/></svg><span>alessandro.facchini@unibocconi.it</span></a>
+        <a class="contact-card" href="mailto:alessandro.facchini@sciencespo.fr"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.75" y="4.75" width="18.5" height="14.5" rx="2.2"/><path d="m3.4 6.6 8.6 6.2 8.6-6.2"/></svg><span>alessandro.facchini@sciencespo.fr</span></a>
+        </div>
+      </section>
+
+      <footer>© 2026 Alessandro Facchini</footer>
+
+    </main>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- expandable abstracts ------------------------------------------- */
+  document.querySelectorAll("[data-abstract-toggle]").forEach(function (btn) {
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!panel) return;
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      panel.hidden = open;
+      btn.querySelector("[data-label]").textContent = open ? "Read abstract" : "Hide abstract";
+    });
+  });
+
+  /* ---- highlight the section currently in view ------------------------- */
+  var links = Array.prototype.slice.call(document.querySelectorAll("[data-nav] a[href^='#']"));
+  var sections = links
+    .map(function (a) { return document.querySelector(a.getAttribute("href")); })
+    .filter(Boolean);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    var seen = new Map();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { seen.set(e.target.id, e.intersectionRatio); });
+      var best = null, bestRatio = 0;
+      seen.forEach(function (ratio, id) {
+        if (ratio > bestRatio) { bestRatio = ratio; best = id; }
+      });
+      links.forEach(function (a) {
+        a.classList.toggle("is-current", best !== null && a.getAttribute("href") === "#" + best);
+      });
+    }, { rootMargin: "-15% 0px -55% 0px", threshold: [0, 0.15, 0.4, 0.75, 1] });
+    sections.forEach(function (s) { io.observe(s); });
+  }
+
+  /* ---- shrink / reveal the sticky bar on scroll ------------------------ */
+  var bar = document.querySelector("[data-sticky]");
+  if (bar) {
+    var onScroll = function () {
+      bar.classList.toggle("is-stuck", window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>
