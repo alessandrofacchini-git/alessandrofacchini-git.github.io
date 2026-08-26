@@ -7,19 +7,29 @@ Personal website of Alessandro Facchini — published with GitHub Pages at
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | The live site. This is the only page GitHub Pages serves as the homepage. |
-| `designs/design-a.html` | Design proposal A — "Ivory & Oxford" |
-| `designs/design-b.html` | Design proposal B — "Slate Institute" |
-| `designs/design-c.html` | Design proposal C — "Editorial Navy" |
-| `assets/` | Optimised portrait, favicon (SVG + PNG), and the social share card |
-| `backup/` | Verbatim copy of the previous site, kept for reference |
+| `index.html` | **The live site** — the "Editorial Navy" design. Self-contained: all CSS and JS are inline. |
+| `assets/` | Portrait, favicon (SVG + PNG), and the social share card |
+| `designs/design-a.html` | Alternative design — "Ivory & Oxford" |
+| `designs/design-b.html` | Alternative design — "Slate Institute" |
+| `backup/` | Verbatim copy of the previous site, kept for rollback |
 | `ALESSANDRO FACCHINI - CV.pdf` | CV, opened in a new tab from the site |
+| `robots.txt`, `sitemap.xml` | Search-engine crawling hints |
+| `googlee5f06614f5ff588b.html` | Google Search Console verification — **do not delete** |
 
-## Choosing a design
+## Editing content
 
-The three files in `designs/` are complete, self-contained pages with identical
-content. To make one of them live, copy it over `index.html` and fix the
-relative paths (they sit one directory deeper):
+Everything lives in `index.html`. The parts you are most likely to change:
+
+- **Papers** — each is an `<li class="paper">` block. Copy one to add another;
+  the `01` / `02` numbering is generated from the markup order.
+- **Abstracts** — the `<div class="abstract" hidden>` inside each paper. Keep the
+  `id` matching the button's `aria-controls`, and keep each paragraph in its own `<p>`.
+- **Research Contributions** — currently placeholder text, ready to be filled in.
+- **Colours** — the `:root` block near the top of the `<style>` element.
+
+## Switching to a different design
+
+The files in `designs/` are complete pages with identical content. To make one live:
 
 ```sh
 sed -e 's|\.\./assets/|assets/|g' -e 's|\.\./ALESSANDRO|ALESSANDRO|g' \
@@ -28,18 +38,11 @@ sed -e 's|\.\./assets/|assets/|g' -e 's|\.\./ALESSANDRO|ALESSANDRO|g' \
 
 ## Restoring the previous version
 
-The previous site is preserved in three places, any one of which is enough:
-
-1. `backup/index-original.html` — a verbatim copy in this repository.
-2. The `backup/site-2026-08-26` branch and the `site-backup-2026-08-26` tag.
-3. Normal git history on `main`.
-
-To roll back completely:
+The previous site is preserved in `backup/`, and in git history on `main`.
 
 ```sh
-git checkout main
 cp backup/index-original.html index.html
 cp backup/AF-original.png AF.png
 git commit -am "Restore previous site"
-git push origin main
+git push
 ```
