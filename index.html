@@ -78,7 +78,7 @@
   --navy:#0F2438; --navy-2:#173651; --navy-3:#0A1A29;
   --gold:#C8A253; --gold-2:#E0C48A;
   --ink:#141A20; --ink-2:#3A444E; --muted:#6C7783;
-  --rule:#E4E9ED; --paper:#FFFFFF; --paper-2:#F7F9FB; --text:690px; --col:820px;
+  --rule:#E4E9ED; --paper:#FFFFFF; --paper-2:#F7F9FB; --text:690px; --col:820px; --gutter:112px;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   --maxw:1200px;
@@ -175,19 +175,23 @@ section{padding-top:62px;scroll-margin-top:56px}
   .sec{display:grid;grid-template-columns:240px minmax(0,var(--col));gap:0 52px;
     justify-content:center;align-items:start}
   .sec>.sec-head{grid-column:1;margin-bottom:0;padding-top:5px}
-  .sec>.sec-body{grid-column:2}
+  .sec>.sec-body{grid-column:2;max-width:none}
+  .sec>.sec-body>.prose,
+  .sec>.sec-body>.mails,
+  .sec>.sec-body>.actions{margin-left:var(--gutter)}
 }
 .sec-rule{display:block;width:42px;height:2px;background:var(--gold);margin-bottom:18px}
 h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,34px);
   line-height:1.16;letter-spacing:-.016em;color:var(--ink)}
-.prose{max-width:var(--text)}
+.prose{max-width:none}
+.sec-body{max-width:var(--text)}
 .prose p{margin:0 0 18px}
 .prose p:last-child{margin-bottom:0}
 .prose p,.abstract p,.hero-lede{text-wrap:pretty}
 
 /* -------------------------------------------------------------- papers --- */
 .papers{list-style:none;margin:0;padding:0}
-.paper{display:grid;grid-template-columns:88px minmax(0,1fr);gap:0 24px;
+.paper{display:grid;grid-template-columns:calc(var(--gutter) - 24px) minmax(0,1fr);gap:0 24px;
   padding:25px 0;border-top:1px solid var(--rule)}
 .num{font-family:var(--serif);font-weight:300;font-size:42px;line-height:1;
   color:var(--gold);opacity:.72;letter-spacing:-.02em}
@@ -238,7 +242,7 @@ footer a{color:rgba(255,255,255,.68)}
 footer a:hover{color:#fff}
 
 /* -------------------------------------------------------------- mobile --- */
-@media (max-width:900px){
+@media (max-width:959px){
   .wrap{padding-inline:28px}
   .hero-inner{grid-template-columns:1fr;gap:34px;padding-block:58px 56px}
   .hero-portrait{width:140px;height:140px;order:-1}
