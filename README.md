@@ -30,6 +30,13 @@ Everything is in `index.html`.
   `<li class="paper" hidden>`. It disappears from the page, from screen readers and from
   search engines, and the change is one word to reverse.
 - **Colours and type** — the `:root` block at the top of the `<style>` element.
+- **The portrait** is served at four sizes (`assets/portrait-320|480|700.jpg` and
+  `portrait.jpg`) through a `srcset`, so a phone downloads ~21 KB instead of 133 KB.
+  If you replace the photo, regenerate all four or the small versions will still show
+  the old picture.
+- **Tap targets** — `.toggle`, `.mails a` and `.foot-inner a` each carry an invisible
+  `::after` overlay that enlarges the tappable area to 48 px on phones. It changes
+  nothing visually; don't remove it.
 
 ## After changing content
 
