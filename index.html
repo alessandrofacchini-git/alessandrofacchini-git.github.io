@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alessandro Facchini — Economics</title>
-<meta name="description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta name="description" content="Alessandro Facchini — economist working on behavioural and labour economics, revealed preference and nonparametric econometrics, inequality of opportunity, and public policy.">
 <meta name="author" content="Alessandro Facchini">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#0F2438">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Alessandro Facchini">
 <meta property="og:title" content="Alessandro Facchini — Economics">
-<meta property="og:description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta property="og:description" content="Alessandro Facchini — economist working on behavioural and labour economics, revealed preference and nonparametric econometrics, inequality of opportunity, and public policy.">
 <meta property="og:url" content="https://alessandrofacchini-git.github.io/">
 <meta property="og:image" content="https://alessandrofacchini-git.github.io/assets/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -21,13 +21,14 @@
 <meta property="og:image:alt" content="Alessandro Facchini — Economics">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alessandro Facchini — Economics">
-<meta name="twitter:description" content="Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.">
+<meta name="twitter:description" content="Alessandro Facchini — economist working on behavioural and labour economics, revealed preference and nonparametric econometrics, inequality of opportunity, and public policy.">
 <meta name="twitter:image" content="https://alessandrofacchini-git.github.io/assets/og-card.png">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="mask-icon" href="assets/favicon.svg" color="#0A1A29">
+<link rel="manifest" href="site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,13 +54,21 @@
   "givenName": "Alessandro",
   "familyName": "Facchini",
   "jobTitle": "Economist",
-  "description": "Alessandro Facchini — Economist working on behavioral economics, labor economics, public policy, and quantitative research.",
+  "description": "Alessandro Facchini — economist working on behavioural and labour economics, revealed preference and nonparametric econometrics, inequality of opportunity, and public policy.",
   "url": "https://alessandrofacchini-git.github.io/",
   "image": "https://alessandrofacchini-git.github.io/assets/portrait.jpg",
   "email": "mailto:alessandro.facchini@unibocconi.it",
   "knowsAbout": ["Behavioral economics", "Labor economics", "Public policy",
-                 "Econometrics", "Revealed preference", "Nonparametric inference"],
-  "sameAs": ["https://www.linkedin.com/in/alessandro-facchini-6b2490238/"]
+               "Econometrics", "Revealed preference", "Nonparametric inference",
+               "Intertemporal choice", "Present bias", "Moment inequalities",
+               "Inequality of opportunity", "Personnel economics",
+               "Remote work", "Matching models", "Causal inference"],
+  "sameAs": ["https://www.linkedin.com/in/alessandro-facchini-6b2490238/"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Sciences Po" },
+    { "@type": "CollegeOrUniversity", "name": "University of Bologna" },
+    { "@type": "CollegeOrUniversity", "name": "Erasmus University Rotterdam" }
+  ]
 }
 </script>
 <style>
@@ -165,7 +174,7 @@ h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,
 .papers{list-style:none;margin:0;padding:0}
 .paper{display:grid;grid-template-columns:88px minmax(0,1fr);gap:0 24px;
   padding:30px 0;border-top:1px solid var(--rule)}
-.paper:last-child{border-bottom:1px solid var(--rule)}
+.papers{border-bottom:1px solid var(--rule)}
 .num{font-family:var(--serif);font-weight:300;font-size:42px;line-height:1;
   color:var(--gold);opacity:.72;letter-spacing:-.02em}
 .paper-title{margin:0;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.34;
@@ -181,6 +190,16 @@ h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,
 .abstract p{margin:0 0 15px}
 .abstract p:last-child{margin-bottom:0}
 .abstract strong{font-weight:600;color:var(--ink)}
+/* lead paragraph under a section heading */
+.sec-lead{max-width:var(--text);margin:0 0 30px;font-size:16.5px;line-height:1.65;color:var(--muted)}
+
+/* collaborator / citation line at the top of an expandable panel */
+.byline{margin:0 0 15px!important;padding-bottom:13px;border-bottom:1px solid var(--rule);
+  font-family:var(--sans);font-size:13.5px;line-height:1.6;color:var(--muted);letter-spacing:.004em}
+.byline em{font-style:italic;color:var(--ink-2)}
+.byline a{color:var(--navy);text-decoration:underline;text-underline-offset:2px;
+  text-decoration-thickness:1px;text-decoration-color:rgba(15,36,56,.3)}
+.byline a:hover{text-decoration-color:var(--gold)}
 @media (prefers-reduced-motion:no-preference){
   .abstract{animation:reveal .28s ease both}
   @keyframes reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
@@ -212,6 +231,7 @@ footer a:hover{color:#fff}
   .hero-inner{grid-template-columns:1fr;gap:34px;padding-block:58px 56px}
   .hero-portrait{width:140px;height:140px;order:-1}
   .hero-lede{font-size:17.5px}
+.sec-lead{font-size:15.5px;margin-bottom:24px}
   section{padding-top:54px}
   .paper{grid-template-columns:1fr;gap:0}
   .num{font-size:26px;margin-bottom:8px;opacity:.85}
@@ -247,7 +267,7 @@ footer a:hover{color:#fff}
       <p class="eyebrow">Economics</p>
       <h1>Alessandro Facchini</h1>
       <div class="hero-rule"></div>
-      <p class="hero-lede">Hi, I’m Alessandro! I have a background in economics and public policy and experience in academic and policy-oriented research. My work has involved economic and econometric analysis, large-scale data, and interdisciplinary research across academic and institutional settings. I enjoy combining quantitative methods with a broader perspective on how individuals, institutions, and societies function, and I am motivated by research that contributes to a better understanding of real-world economic and social challenges.</p>
+      <p class="hero-lede">Hi, I’m Alessandro — an economist working across behavioural economics, labour economics, and public policy. A single thread runs through most of what I do: separating what is genuinely a property of a person — a preference, a bias, a manager’s style — from what is a property of the situation the person is placed in, and building the tests that can tell the two apart. I combine revealed-preference and nonparametric methods with quasi-experimental designs on large administrative and experimental data, and I have worked on these questions in research roles at MIT, Bocconi, Princeton, Sciences Po and the OECD. I am drawn to questions where a sharper method changes the answer, and where the answer changes what a policymaker would do.</p>
       <div class="actions">
         <a class="btn" href="ALESSANDRO%20FACCHINI%20-%20CV.pdf" target="_blank" rel="noopener">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H7.5A2 2 0 0 0 5.5 4.5v15a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7.5z"/><path d="M14 2.5v5h4.5M9 13h6M9 16.5h4"/></svg>Curriculum Vitae<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M9.5 7.5h7v7"/></svg></a>
@@ -276,75 +296,191 @@ footer a:hover{color:#fff}
 
   <section id="research" class="wrap sec">
     <div class="sec-head"><span class="sec-rule"></span><h2>Research Interests</h2></div>
-    <div class="sec-body"><div class="prose"><p>My research interests span behavioral economics, decision-making, labor economics, and public policy. I am interested in using economic theory and quantitative methods to study how individuals and institutions make decisions and how these decisions shape economic outcomes and inequality. I combine econometric methodology with large-scale data to test economic theories and evaluate policy-relevant questions, with an emphasis on methods that rely on relatively few assumptions. My work includes both methodological research on revealed preference, rationality, and nonparametric inference, and applied research on labor markets, firms, inequality, and public policy.</p></div></div>
+    <div class="sec-body"><div class="prose">
+  <p>My research sits between econometric methodology and applied microeconomics. On the methodological side I work on revealed preference and nonparametric identification: what can be learned about preferences, rationality and welfare from choice data alone, under assumptions weak enough that a rejection is informative about behaviour rather than about a functional form. That includes tests that stay valid when preferences are stochastic, state-dependent, or changing over time, and inference for the moment inequalities such tests generate.</p>
+  <p>On the applied side I hold the same standard of evidence to questions about labour markets, organisations, inequality and public policy — how managers shape the way work is organised and what that does to output; how early-life circumstances and educational institutions generate inequality of opportunity; how wage floors and wage ceilings reshape pay, effort and turnover in the public sector. This work uses large administrative and geospatial panels, matched worker–manager data, and the quasi-experimental toolkit: event studies with staggered adoption and heterogeneous treatment effects, regression discontinuity, shift-share and lottery-based designs.</p>
+  <p>What connects the two sides is a preference for methods that make their own assumptions visible, and for results that are still standing after the design has been given every chance to break them.</p>
+</div></div>
   </section>
 
   <section id="work-in-progress" class="wrap sec">
     <div class="sec-head"><span class="sec-rule"></span><h2>Work in Progress</h2></div>
     <div class="sec-body"><ul class="papers">
-        <li class="paper">
-          <div class="num" aria-hidden="true">01</div>
-          <div>
-            <h3 class="paper-title">Disentangling Rationality: A Nonparametric Approach to Intertemporal Choice, Self-Control, and Present Bias</h3>
-            <button class="toggle" type="button" data-abstract-toggle
-                    aria-expanded="false" aria-controls="wip-1">
-              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
-            </button>
-            <div class="abstract" id="wip-1" hidden>
-              <p>Why do individuals sometimes act differently from what they previously intended — procrastinating on unpleasant tasks, changing saving or spending decisions as the future becomes the present, or making different choices about food, substance use, or digital media than they had planned? Behavioral economics often attributes such behavior to <em>present bias</em>: a tendency to place disproportionate weight on immediate rewards. Yet apparent impatience can also arise from uncertainty, liquidity constraints, the curvature of costs and rewards, aggregation, or unobserved and time-varying preferences. The central question is therefore: <strong>how much of observed time-inconsistency reflects genuine self-control problems, and how much reflects other features of the decision environment?</strong></p>
-              <p>This paper develops a nonparametric framework for disentangling these explanations and studying intertemporal rationality with minimal assumptions on preferences and behavior. It combines revealed-preference theory with experimental, quasi-experimental, and panel variation across multiple domains of intertemporal choice, using multi-vantage designs and exogenous variation to separate genuine time-inconsistency from observationally similar mechanisms. To account for measurement error, stochastic choices, and unobserved preference variation, the framework combines nonparametric bounds, latent-variable integration, and conditional moment inequalities to test whether observed behavior can be rationalized by alternative models without imposing restrictive functional forms or mechanically treating noisy choices as irrational.</p>
-              <p>The framework provides a way to ask <strong>when observed impatience is evidence of present bias, when it is not, and what revealed choices can tell us about self-control</strong>. It also allows present bias to be understood not necessarily as a fixed individual trait, but as a potentially state- and context-dependent feature of decision-making — an interpretation with implications for how behavioral biases are measured, how welfare is assessed, and how choice environments are designed.</p>
-            </div>
-          </div>
-        </li>
-        <li class="paper">
-          <div class="num" aria-hidden="true">02</div>
-          <div>
-            <h3 class="paper-title">Inequality of Opportunity: Early Education, Life-Course Trajectories, and Public Policy</h3>
-            <button class="toggle" type="button" data-abstract-toggle
-                    aria-expanded="false" aria-controls="wip-2">
-              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
-            </button>
-            <div class="abstract" id="wip-2" hidden>
-              <p>Why do inequalities that emerge early in life persist — and at which points can public policy meaningfully change their trajectories? This paper studies how family background, educational environments, and institutional access shape inequality of opportunity over the life course, and how policy interventions can alter these trajectories.</p>
-              <p>Using rich individual-level and administrative data from Chile, the analysis first maps how early-life circumstances translate into differences in educational progression and later outcomes. It then exploits institutional reforms generating quasi-random variation in educational resources, instructional time, and school access. Regression discontinuity, staggered difference-in-differences, event-study designs, and lottery-based assignment are used to identify causal effects and examine how they vary across students, schools, and socioeconomic backgrounds.</p>
-              <p>The broader contribution is to connect the structure of inequality with its causal mechanisms: identifying where and how disadvantage accumulates, and which policy margins can most effectively alter these trajectories. By combining life-course analysis with rigorous causal inference, the project aims to move beyond documenting disparities toward understanding when, where, and for whom policy can expand opportunities and break persistent cycles of disadvantage.</p>
-            </div>
-          </div>
-        </li>
-    </ul></div>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">01</div>
+    <div>
+      <!-- Alternative title, kept for later:
+           Present Bias Is a Property of the Moment, Not the Person
+           — A Revealed-Preference Audit of the Present-Bias Parameter -->
+      <h3 class="paper-title">Disentangling Rationality: A Nonparametric Approach to Intertemporal Choice, Self-Control, and Present Bias</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="wip-1">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read abstract" data-less="Hide abstract">Read abstract</span>
+      </button>
+      <div class="abstract" id="wip-1" hidden>
+        <p>Why do people act against their own plans — procrastinating on unpleasant tasks, saving less than they intended, choosing differently about food, substances or screens than they had decided to? Economics has a standard answer, <em>present bias</em>, and a standard way of recording it: one parameter, attached to a person, carried across goods, states and settings, and calibrated into optimal-tax and default-design exercises. Yet the field’s own published estimates of that parameter, placed side by side, span nearly the whole range the theory allows, and even its best-known regularities do not hold across elicitation methods. The usual reading of that spread is imprecision. This project takes seriously a different one — that the spread is the parameter failing to be a single thing — and asks the prior question the literature tends to skip: <strong>is there one present-bias parameter, and if so, of what is it a property? Of a person, of a person in a domain, or of a moment?</strong></p>
+        <p>The question is answered with research designs that share no data, no subjects and no identification strategy, so that agreement between them means something: a randomised, within-person manipulation of the state a decision is taken in, already embedded in the canonical real-effort panel; the cross-domain correlation of <em>individual</em> present bias, corrected for the sampling noise in each individual estimate rather than reported raw; and a protocol that holds the price grid, the delay and the subjects fixed and varies only the good, so that the most cited fact in this literature can be tested as a claim about the timing of consumption rather than about commodities.</p>
+        <p>Reaching those answers required repairing the instrument first. The statistic conventionally used to ask whether present bias depends on some state does not, in fact, test state-dependence: under nulls in which the parameter is stochastic and heterogeneous but independent of the state, it rejects almost always. The project therefore develops a revealed-preference characterisation of state-dependent quasi-hyperbolic discounting; a nested ladder of restrictions on it, with the result that its unrestricted rung has no testable content, so that everything testable lives in the restrictions; the moment-inequality statistic each rung actually requires; and Monte-Carlo certificates of size and power for every test before any of them touches data. It also audits the estimator itself, which is an exponential of estimates and therefore carries a bias that can manufacture a state gradient out of a world where the parameter is exactly constant.</p>
+        <p>The payoff is a framework for asking <strong>when observed impatience is evidence of a self-control problem, when it is not, and what choices can and cannot reveal about self-control</strong>. It supports treating present bias not necessarily as a fixed individual trait but as a potentially state- and context-dependent feature of decision-making, and it takes that reading to welfare: whether demand for commitment can serve as the certifier the literature calls it, and whether the measured welfare wedge is located in people or in the environments they act in. Both have direct implications for how behavioural parameters are measured and reported, how welfare is evaluated when the analyst cannot appeal to a stable preference, and where choice architecture is worth applying.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">02</div>
+    <div>
+      <h3 class="paper-title">Inequality of Opportunity: Early Education, Life-Course Trajectories, and Public Policy</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="wip-2">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read abstract" data-less="Hide abstract">Read abstract</span>
+      </button>
+      <div class="abstract" id="wip-2" hidden>
+        <p>Inequalities that appear early in life are strikingly persistent — but persistence is not inevitability, and the policy question is <strong>where along a trajectory an intervention actually changes the path</strong>. This project studies how family background, educational environments and institutional access generate inequality of opportunity over the life course, and which policy margins can most effectively alter it.</p>
+        <p>Its premise is that the two dominant approaches to the question answer different things and are stronger together than apart. Descriptive work documents correlations between early circumstances and later outcomes; causal work identifies the effect of one intervention over a short horizon. Structured correlations across time reveal the <em>architecture</em> of a life course — which transitions are load-bearing, where disadvantage compounds, which margins are worth an identification strategy at all. Causal analysis then disciplines that architecture by sequencing its links and pricing the interventions that operate on them.</p>
+        <p>The empirical setting is Chile, which pairs unusually rich individual-level and administrative data — linking students’ socio-economic background, test scores and educational trajectories over time, together with detailed information on teachers and schools — with a sequence of major education reforms that generate quasi-random variation at different points of the trajectory. The analysis proceeds in two stages. It first maps early-life and educational trajectories, building on the circumstance-based measurement of inequality of opportunity to identify systematic patterns linking family background, school attachment, educational progression and later outcomes. It then turns to identification: administrative eligibility thresholds and later expansions in the targeted school-funding scheme, which support regression-discontinuity and event-study difference-in-differences estimates of the effect of additional resources and governance requirements; the staggered roll-out of extended instructional time and the extension of compulsory schooling, which allow difference-in-differences estimation robust to heterogeneous treatment effects; and the centralised, lottery-based admission system, which delivers random variation in access to oversubscribed schools and therefore clean estimates of school, teacher and peer effects. Throughout, heterogeneity is the object of interest rather than a robustness check: which students, in which schools, from which backgrounds.</p>
+        <p>The contribution is to connect the structure of inequality of opportunity to its causal mechanisms within a single setting. Measures of inequality of opportunity are increasingly used to describe how fair an outcome distribution is, but they are rarely taken into administrative data and asked which concrete policy margins move them. By combining life-course analysis with credible identification, the project aims to move past documenting disparities toward saying when, where and for whom public policy can genuinely widen the set of opportunities open to a child — rather than reducing disparities in outcomes after the fact.</p>
+      </div>
+    </div>
+  </li>
+
+</ul></div>
   </section>
 
   <section id="contributions" class="wrap sec">
     <div class="sec-head"><span class="sec-rule"></span><h2>Research Contributions</h2></div>
-    <div class="sec-body"><ul class="papers">
-        <li class="paper">
-          <div class="num" aria-hidden="true">01</div>
-          <div>
-            <h3 class="paper-title">Contribution title 1.</h3>
-            <button class="toggle" type="button" data-abstract-toggle
-                    aria-expanded="false" aria-controls="con-1">
-              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
-            </button>
-            <div class="abstract" id="con-1" hidden>
-              <p>Description-1.</p>
-            </div>
-          </div>
-        </li>
-        <li class="paper">
-          <div class="num" aria-hidden="true">02</div>
-          <div>
-            <h3 class="paper-title">Contribution title 2.</h3>
-            <button class="toggle" type="button" data-abstract-toggle
-                    aria-expanded="false" aria-controls="con-2">
-              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label>Read abstract</span>
-            </button>
-            <div class="abstract" id="con-2" hidden>
-              <p>Description-2.</p>
-            </div>
-          </div>
-        </li>
-    </ul></div>
+    <div class="sec-body"><p class="sec-lead">Projects I have worked on substantially as a pre-doctoral researcher, research assistant or policy analyst. I am not an author on these; my involvement has typically spanned the empirical design, the estimation pipeline and the analysis. The researchers leading each project are named alongside it.</p>
+
+<ul class="papers">
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">01</div>
+    <div>
+      <h3 class="paper-title">Testing Rationality When Tastes Can Change: Revealed Preference Meets Instrumental Variables</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-1">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-1" hidden>
+        <p class="byline">Dave Donaldson (MIT)</p>
+        <p>The classical revealed-preference test asks whether a finite set of price–quantity observations can be rationalised by one stable utility function. Its great strength is that it assumes no functional form; its weakness is that when it rejects, an irrational consumer and a consumer whose tastes simply moved look identical. This project builds a test that does not need stable tastes at all. Revealed preference does not deliver a point prediction for how quantities respond to a price change — it delivers a corridor of admissible responses. Writing that corridor as a system of inequalities, and treating any departure from it as an unobserved taste displacement, converts the rationality question into one an instrument can answer, in the spirit of testing a quantitative model’s causal predictions rather than its in-sample fit. The null becomes not that preferences are stable but that they do not co-move with prices: tastes may jump every period, for every consumer, so long as they do not respond to the price environment. The work spans the theory of the pairwise construction that makes this possible, the design of the randomised price environment and of the instrument built from it, inference for the resulting moment inequalities, and Monte-Carlo evidence on size and power across demand systems, measurement error, taste drift and non-optimising choice.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">02</div>
+    <div>
+      <h3 class="paper-title">Managers and the Organisation of Remote Work</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-2">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-2" hidden>
+        <p class="byline">Erika Deserranno (Bocconi University) · Maria De Paola (University of Calabria and INPS) · Silvia Vannutelli (Northwestern University)</p>
+        <p>Remote work now accounts for a large and durable share of paid workdays, and workers differ enormously not only in how much of it they do but in how it is <em>organised</em>: whether it is spread evenly across a team or captured by a few people, and whether it always falls on the same weekdays. Some of that variation is industry, job and preference. This project asks how much of it is the manager, and whether the answer shows up in output.</p>
+        <p>The setting is INPS, Italy’s social security agency: several hundred territorial offices processing pension, unemployment, disability and family claims, daily remote-work records for around thirty thousand employees, monthly office-level productivity measured in complexity-weighted claims per worker, and an anti-corruption rule that rotates managers between offices for reasons largely unrelated to an office’s performance. Manager fixed effects estimated on the worker–month panel separate a manager’s style from worker composition and from the calendar; a matched, stacked event study around manager changes then asks what happens to productivity when an office receives a manager with a different style. Because the amount of remote work can be held fixed in that second stage, <em>how</em> remote work is organised can be read separately from <em>how much</em> of it there is — which is where the project departs from a literature that has largely studied intensity alone, and in a public-sector setting where exit is rare and pay is rigid.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">03</div>
+    <div>
+      <h3 class="paper-title">Discrete Choice, Matching, and Equilibrium Transport</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-3">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-3" hidden>
+        <p class="byline">Alfred Galichon (New York University and Sciences Po) · Antoine Jacquet (Sciences Po)</p>
+        <p>Discrete choice models sit at the centre of demand estimation, matching and equilibrium pricing, and their mathematics is roughly half optimisation theory and half probability. This strand covers several connected projects. The first is the book <em>Discrete Choice Models: Mathematical Methods, Econometrics, and Data Science</em> (Alfred Galichon, forthcoming, Princeton University Press), which pairs its theory with an extensive appendix of Python demonstrations, and whose preface records research assistance at various stages of the project. The second is a lecture chapter on substitutability, equilibrium transport and matching models, which recovers a largely forgotten literature on Z- and M-functions to establish when coordinate-update algorithms such as nonlinear Jacobi and Sinkhorn converge, and uses substitutability rather than convexity to treat matching with transferable, imperfectly transferable and non-transferable utility inside one framework. The third is computational, on matching problems that resist the standard machinery: Scarf’s ordinal basis algorithm applied to near-feasible stable matchings with couples, the multi-unit assignment problem underlying combinatorial course allocation, and the Alkan–Gale approach to the existence and computation of matching equilibria.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">04</div>
+    <div>
+      <h3 class="paper-title">To Have and Have Not: How to Bridge the Gap in Opportunities</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-4">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-4" hidden>
+        <p class="byline">OECD (2025), OECD Publishing, Paris · Centre on Well-being, Inclusion, Sustainability and Equal Opportunity (WISE) · <a href="https://doi.org/10.1787/dec143ad-en" target="_blank" rel="noopener">doi.org/10.1787/dec143ad-en</a></p>
+        <p>The seventh in the OECD’s flagship series on inequality, and the first released under the Observatory on Social Mobility and Equal Opportunity. The report asks how much of the dispersion in market income across OECD countries is attributable to circumstances beyond an individual’s control — sex, place of birth, parental socio-economic background — rather than to effort and talent, and it does so with a measure of inequality of opportunity built on recent methodological advances and designed to align more closely with how citizens themselves judge economic fairness. Beyond levels and trends, it decomposes inequality of opportunity into the circumstances that drive it, asks for whom each circumstance matters most, contrasts household-level with individual-level measurement, and adds a geographic dimension: within-country disparities in access to education, employment and essential services. My statistical support and input on the measurement chapters and on the policy chapter are recorded in the report.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">05</div>
+    <div>
+      <h3 class="paper-title">Global Experiences of Discrimination</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-5">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-5" hidden>
+        <p class="byline">OECD (2025), <em>OECD Policy Insights on Well-being, Inclusion and Equal Opportunity</em>, No. 22, OECD Publishing, Paris · WISE Centre · <a href="https://doi.org/10.1787/4b01b73c-en" target="_blank" rel="noopener">doi.org/10.1787/4b01b73c-en</a></p>
+        <p>Self-reported discrimination rates are used to track the Sustainable Development Goals, but they are typically published without the social, institutional and economic context that shapes them, and the available data miss several protected grounds entirely. This brief assembles recently released global discrimination surveys, world values surveys, objective measures of inequality and qualitative accounts of individual experience to produce the broadest analysis of self-reported discrimination to date — wider in the countries it covers and in the grounds it can examine than the official statistics. It documents how reported discrimination varies across regions and across groups, and uses country-level regression analysis to separate the institutional, demographic, economic, cultural and knowledge-related factors associated with it. That includes an uncomfortable and policy-relevant result: more equal, more educated and more developed societies can report <em>more</em> discrimination, because expectations of equal treatment and awareness of one’s rights are higher there — which is precisely why the headline rate should not be read on its own.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">06</div>
+    <div>
+      <h3 class="paper-title">Understanding the Macroeconomic and Societal Impacts of the Living Wage</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-6">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-6" hidden>
+        <p class="byline">OECD (2025), working paper · WISE Centre</p>
+        <p>Whether the widespread adoption of a living wage can durably raise low-wage workers’ living standards depends on how the economy responds — and the evidence base is thinner and more fragile than the policy debate assumes. This paper reviews what is known about the impacts of living wage initiatives and, because those schemes are usually voluntary or bounded to a single city, complements it with a selected review of minimum wage increases in countries beyond the usual Anglophone evidence base. It covers wage inequality, in-work poverty, hours and employment, and price pass-through, and it is deliberately explicit about what the evidence cannot yet support: retrospective studies struggle to separate the policy from employers’ self-selection into it; prospective microsimulations import elasticities estimated at a much lower wage floor and typically assume immediate and universal compliance, which makes them upper bounds; and few studies follow adjustment beyond two or three years. Institutional context — coverage, enforcement, informality, indexation, wage-setting institutions — is treated as a first-order determinant of the effect rather than as a closing caveat.</p>
+      </div>
+    </div>
+  </li>
+
+  <!-- ============================================================
+       OPTIONAL ITEMS 07 AND 08 start here. They are LIVE as written.
+       To hide either one without removing it from the file, add the
+       word  hidden  to its <li>, i.e.  <li class="paper" hidden>
+       ============================================================ -->
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">07</div>
+    <div>
+      <h3 class="paper-title">Maximum Wage and Organisational Performance</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-7">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-7" hidden>
+        <p class="byline">Erika Deserranno (Bocconi University) · Matteo Ruzzante · Daniel Rogger (World Bank)</p>
+        <p>A very large literature studies the minimum wage. There is far less evidence on the <em>maximum</em> wage, despite its growing policy salience. Liberia introduced one in 2019: a public-sector pay reform that abolished the discretionary allowances which had made up most of top earners’ compensation and replaced them with a standardised payscale and a binding wage ceiling, with the twin goals of compressing pay and cutting the wage bill. The reform took effect in most ministries at once, leaving a set of comparison ministries, and it produced a sharp, largely mechanical pay cut whose size is predicted almost exactly by an employee’s pre-reform position relative to the ceiling. The project combines payroll snapshots covering the universe of public employees, randomised spot-check audits of attendance and turnover, and 360-degree performance surveys covering entire units, to trace the effects on pay compression, exit, absenteeism and organisational performance. Because the cut falls overwhelmingly on managers while their staff sit below the ceiling, the design also identifies the spillover of a manager’s pay cut onto the team, alongside difference-in-differences, triple-difference and shift-share exposure strategies built at the team level.</p>
+      </div>
+    </div>
+  </li>
+
+  <li class="paper">
+    <div class="num" aria-hidden="true">08</div>
+    <div>
+      <h3 class="paper-title">The Rise of the City and the Decline in Fertility</h3>
+      <button class="toggle" type="button" data-abstract-toggle
+              aria-expanded="false" aria-controls="con-8">
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read more" data-less="Hide">Read more</span>
+      </button>
+      <div class="abstract" id="con-8" hidden>
+        <p class="byline">Leonardo D’Amico (Princeton University) · Francesco Nuzzi (Harvard University)</p>
+        <p>How much of the decline in US fertility over the past four decades is attributable to the rise of high-density cities, and specifically to what living in them costs? Agglomeration has pulled workers, especially skilled workers, into dense urban areas, where housing and the non-tradable goods that dominate the price of raising a child are considerably more expensive, and where wages do not on average keep pace. The project pairs a quantitative spatial model with fertility and location choice, amenable to general-equilibrium counterfactuals and extendable to heterogeneity by skill, with an empirical strategy for identifying the causal effect of housing costs on completed fertility. The empirical side builds a long panel of US commuting zones from census and survey microdata, linking population density, house-price-to-income ratios and childcare costs to total and age-specific fertility rates. Doing that credibly means harmonising variable definitions and geographic crosswalks across four decades, so that a gradient first observed in the cross-section can be followed through time rather than only across space.</p>
+      </div>
+    </div>
+  </li>
+
+</ul></div>
   </section>
 
   <section id="contact" class="band">
@@ -383,11 +519,14 @@ footer a:hover{color:#fff}
   document.querySelectorAll("[data-abstract-toggle]").forEach(function (btn) {
     var panel = document.getElementById(btn.getAttribute("aria-controls"));
     if (!panel) return;
+    var lab  = btn.querySelector("[data-label]");
+    var more = (lab && lab.getAttribute("data-more")) || "Read abstract";
+    var less = (lab && lab.getAttribute("data-less")) || "Hide abstract";
     btn.addEventListener("click", function () {
       var open = btn.getAttribute("aria-expanded") === "true";
       btn.setAttribute("aria-expanded", String(!open));
       panel.hidden = open;
-      btn.querySelector("[data-label]").textContent = open ? "Read abstract" : "Hide abstract";
+      if (lab) lab.textContent = open ? more : less;
     });
   });
 

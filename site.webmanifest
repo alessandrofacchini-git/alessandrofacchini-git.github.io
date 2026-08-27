@@ -1,0 +1,13 @@
+{
+  "name": "Alessandro Facchini",
+  "short_name": "A. Facchini",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#0F2438",
+  "background_color": "#0F2438",
+  "icons": [
+    { "src": "assets/favicon-32.png",  "sizes": "32x32",   "type": "image/png" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icon-512.png",    "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
