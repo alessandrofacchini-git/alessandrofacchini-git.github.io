@@ -209,6 +209,15 @@ h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,
   font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.02em}
 .toggle:hover{text-decoration:underline;text-underline-offset:3px}
 .chev{width:14px;height:14px;transition:transform .22s ease}
+/* links next to "Read abstract" (Full paper, Interactive version). Unused if the links are commented out. */
+.paper-links{display:flex;flex-wrap:wrap;align-items:center;column-gap:26px;margin-top:6px}
+.paper-links .toggle{margin-top:0;min-height:44px;padding:0}
+.paper-links + .abstract{margin-top:8px}
+.plink{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:var(--navy);
+  font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.02em}
+.plink .ic{width:15px;height:15px;flex:none}
+.plink:hover{text-decoration:underline;text-underline-offset:3px}
+
 .toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
 .abstract{margin-top:14px;padding:22px 26px;background:var(--paper-2);
   border-radius:4px;font-size:16.5px;line-height:1.66;color:var(--ink-2)}
@@ -268,7 +277,7 @@ footer a:hover{color:#fff}
 }
 
 @media print{
-  .nav,.actions,.toggle,.skip{display:none!important}
+  .nav,.actions,.toggle,.plink,.skip{display:none!important}
   .hero,.band,footer{background:#fff!important;color:#000!important}
   .hero::after,.band::after{display:none}
   h1,.hero-lede,.band h2,.mails a{color:#000!important}
@@ -339,16 +348,24 @@ footer a:hover{color:#fff}
       <!-- Alternative title, kept for later:
            Present Bias Is a Property of the Moment, Not the Person
            — A Revealed-Preference Audit of the Present-Bias Parameter -->
-      <h3 class="paper-title">Disentangling Rationality: A Nonparametric Approach to Intertemporal Choice, Self-Control, and Present Bias</h3>
+      <h3 class="paper-title">Beyond the Trait: Present Bias as a Reaction Function. Revealed Preference, Empirical Evidence, and State-Dependent Self-Control</h3>
+      <div class="paper-links">
       <button class="toggle" type="button" data-abstract-toggle
               aria-expanded="false" aria-controls="wip-1">
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg><span data-label data-more="Read abstract" data-less="Hide abstract">Read abstract</span>
       </button>
+      <!-- PAPER LINKS. Each link below is one line; to hide one, comment out its line. -->
+      <a class="plink" href="Beyond%20The%20Trait.pdf" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H7.5A2 2 0 0 0 5.5 4.5v15a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7.5z"/><path d="M14 2.5v5h4.5M9 13h6M9 16.5h4"/></svg>Full paper</a>
+      <a class="plink" href="beyond-the-trait/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2.2"/><circle cx="9" cy="17" r="2.2"/></svg>Interactive version</a>
+      <!-- /PAPER LINKS -->
+      </div>
       <div class="abstract" id="wip-1" hidden>
-        <p>Why do people act against their own plans — procrastinating, saving less than intended, or making different choices about food, substances, or screens than they had decided? Economics has a standard answer: <em>present bias</em>, usually represented by a single parameter attached to a person and carried across goods, states, and settings. Yet published estimates span nearly the entire theoretical range, and even the field’s best-known regularities vary across elicitation methods. Rather than treating this variation as mere imprecision, this project asks a more fundamental question: <strong>is there one present-bias parameter, and if so, of what is it a property — a person, a person in a domain, or a moment?</strong></p>
-        <p>I investigate this through three complementary designs: a randomised within-person manipulation of the state in which decisions are made; the cross-domain correlation of <em>individual</em> present bias, corrected for sampling noise; and a protocol holding prices, delays, and subjects fixed while varying only the good. Together, these designs test whether present bias is a stable individual trait or instead depends systematically on context.</p>
-        <p>The project also develops the methodology needed to answer this question. I show that the statistic conventionally used to test state-dependence can reject even when heterogeneous present bias is independent of the state. I therefore develop a revealed-preference framework for state-dependent quasi-hyperbolic discounting, identify its testable restrictions, derive the corresponding moment-inequality tests, and validate them through Monte Carlo experiments. I further show how the nonlinear estimator itself can generate a spurious state gradient when the underlying parameter is constant.</p>
-        <p>The contribution is a framework for distinguishing <strong>when observed impatience is evidence of a self-control problem, when it is not, and what choices can — and cannot — reveal about self-control</strong>. This has direct implications for how behavioural parameters are measured, how welfare is evaluated without assuming stable preferences, and when commitment devices and choice architecture are justified.</p>
+        <p>Present bias is often estimated, reported and calibrated as a personal parameter: a common β across states, goods, and settings. Re-examining data from three independent experimental designs, I test the invariance restrictions imposed by a single β and find that several fail.</p>
+        <p><em>First</em>, in a real-effort panel (Augenblick and Rabin, 2019), randomizing whether choices precede or follow a mandatory work block shifts the estimated β from 0.88 (before) to 0.74 (after) within subjects. This exogenous state variation reduces immediate effort while leaving choices and forecasts about future work unchanged, rejecting the cross-vantage equality assumed by pooled specifications. These findings are robust to design-recentering on the treatment’s conditional expectation under exact randomization inference.</p>
+        <p><em>Second</em>, applying a bivariate measurement-error model to the data of Augenblick et al. (2015) to account for sampling noise reveals genuine dispersion in present bias over effort, but none over money, among the same individuals. This contradicts the stable-trait hypothesis, since no correlation can arise between a variable and a constant.</p>
+        <p><em>Third</em>, using a common protocol across rewards (Cheung et al., 2022), I confirm their finding of stronger present bias over money than over food. However, differences in β across snack subgroups exceed the money–food gap, challenging commodity-level explanations. Individual-level correlations suggest trait-like stability within trade-off structures, but not across them. Present bias thus appears to depend on the person–reward pairing, conditional on trade-off structure and state, rather than on either component alone.</p>
+        <p>Uncovering these patterns requires an appropriate testing framework: the level statistics conventionally used to document heterogeneity in β cannot distinguish genuine state dependence from stochastic variation under a state-independent model. I derive a valid class of test statistics using recentered functions of the assigned state and provide a revealed-preference characterization of state-dependent quasi-hyperbolic discounting that extends Echenique et al. (2020), nesting exponential discounting and the fixed-trait specification as special cases. I also establish coordinate-level conditions for eliminating non-linear transformation bias and develop nonparametric tests that relax functional-form restrictions on utility and cost functions.</p>
+        <p>To establish common ground across normative perspectives, I conservatively define welfare losses as the unanticipated component of the plan-versus-action wedge, showing empirically that it constitutes the majority of the observed wedge. Accordingly, commitment demand cannot serve as a reliable diagnostic of bias, as it tracks the accurate component of people’s forecasts rather than their prediction errors. Finally, I present a framework of state-weighted valuation systems that formalizes present bias as a state-dependent reaction function, recovering traditional models under specific restrictions. Overall, these results broaden the scope of policy beyond individual targeting and voluntary self-correction to encompass the choice environment, recognizing that the decision context can embed the very cues that shape present bias.</p>
       </div>
     </div>
   </li>

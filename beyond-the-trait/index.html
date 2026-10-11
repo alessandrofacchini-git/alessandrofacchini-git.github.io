@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beyond the Trait — Interactive Version · Alessandro Facchini</title>
+<meta name="description" content="An interactive walk-through of “Beyond the Trait: Present Bias as a Reaction Function”: why present bias is not one number per person, how to test it, and what it means for welfare and policy.">
+<meta name="author" content="Alessandro Facchini">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0F2438">
+<link rel="canonical" href="https://alessandrofacchini-git.github.io/beyond-the-trait/">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Alessandro Facchini">
+<meta property="og:title" content="Beyond the Trait — Present Bias as a Reaction Function (interactive)">
+<meta property="og:description" content="Present bias is usually treated as one number per person. This interactive version of the paper shows why that number moves with the state, the trade-off and the reward.">
+<meta property="og:url" content="https://alessandrofacchini-git.github.io/beyond-the-trait/">
+<meta property="og:image" content="https://alessandrofacchini-git.github.io/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bt.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Beyond the Trait: Present Bias as a Reaction Function",
+  "alternativeHeadline": "Revealed Preference, Empirical Evidence, and State-Dependent Self-Control",
+  "author": { "@type": "Person", "@id": "https://alessandrofacchini-git.github.io/#person", "name": "Alessandro Facchini", "url": "https://alessandrofacchini-git.github.io/" },
+  "datePublished": "2026-10-10",
+  "inLanguage": "en",
+  "url": "https://alessandrofacchini-git.github.io/beyond-the-trait/",
+  "encoding": { "@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": "https://alessandrofacchini-git.github.io/Beyond%20The%20Trait.pdf" },
+  "about": ["present bias", "quasi-hyperbolic discounting", "revealed preference", "self-control", "behavioral welfare economics"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#question">Skip to content</a>
+
+<!-- =========================================================== HERO === -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Interactive version · Working paper, October 2026</p>
+      <h1>Beyond the Trait</h1>
+      <p class="subtitle">Present bias as a reaction function</p>
+      <p class="subsubtitle">Revealed preference, empirical evidence, and state-dependent self-control</p>
+      <div class="hero-rule"></div>
+      <p class="hero-lede">Economists usually treat present bias — the extra pull of <em>now</em> — as one number per person, <span class="m">β</span>. This paper asks whether that number exists. It finds that <span class="m">β</span> does not travel: it moves with the state in which people choose, it behaves like a trait only within one kind of trade-off, and it attaches to the pairing of a person with a reward.</p>
+      <p class="byline-hero"><a href="../">Alessandro Facchini</a></p>
+      <div class="actions">
+        <a class="btn" href="../Beyond%20The%20Trait.pdf" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H7.5A2 2 0 0 0 5.5 4.5v15a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7.5z"/><path d="M14 2.5v5h4.5M9 13h6M9 16.5h4"/></svg>Read the full paper<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M9.5 7.5h7v7"/></svg></a>
+        <a class="btn btn-ghost" href="#question">Start the tour<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      </div>
+      <p class="hero-meta">About 15 minutes · interactive figures throughout · the numbers are the paper’s own</p>
+    </div>
+    <div class="hero-art" data-viz="hero" aria-hidden="true"></div>
+  </div>
+</header>
+
+<!-- ============================================================ NAV === -->
+<nav class="nav" aria-label="Chapters">
+  <div class="wrap nav-inner">
+    <a class="nav-home" href="../"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span>Homepage</span></a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <ul data-nav>
+      <li><a href="#question">Question</a></li>
+      <li><a href="#vantages">Plan vs act</a></li>
+      <li><a href="#axes">Axes</a></li>
+      <li><a href="#testing">Testing</a></li>
+      <li><a href="#state">State</a></li>
+      <li><a href="#margins">Margins</a></li>
+      <li><a href="#person">Person</a></li>
+      <li><a href="#good">Good</a></li>
+      <li><a href="#magnitude">How big</a></li>
+      <li><a href="#welfare">Welfare</a></li>
+      <li><a href="#model">Why</a></li>
+      <li><a href="#takeaways">Takeaways</a></li>
+    </ul>
+  </div>
+  <div class="progress" data-progress></div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================================================ 01 THE QUESTION === -->
+<section class="chapter" id="question">
+  <div class="ch-head">
+    <p class="ch-num"><b>01</b>The question</p>
+    <h2>One number per person?</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">In the standard model of present bias, anything that does not happen <em>now</em> is discounted by an extra factor <span class="m">β</span> ≤ 1, on top of ordinary discounting. With <span class="m">β</span> = 1 there is no present bias; the lower <span class="m">β</span>, the stronger the pull of the present.</p>
+    <p>The field estimates <span class="m">β</span> as a personal parameter, and carries it across goods, states and settings. Yet published estimates of the “same” parameter run from 0.34 to 1.03 — a spread no single study’s confidence interval covers. Read as noise, that is imprecision. Read structurally, it is one number failing to capture a response that depends on context.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 1</span></div>
+      <p class="fig-title">Same choices, three readings</p>
+      <p class="fig-sub">Each tab is one of the three designs re-examined in the paper. Each breaks a different invariance that a single <span class="m">β</span> would impose.</p>
+    </figcaption>
+    <div class="viz" data-viz="readings"><noscript><p class="noscript">The interactive figures need JavaScript. The full paper is available as a PDF.</p></noscript></div>
+    <p class="fig-note">Left: published estimates collected by Lockwood (2020), as drawn in the paper. Right: Augenblick &amp; Rabin (2019), 100 people; Augenblick, Niederle &amp; Sprenger (2015), 101 people; Cheung et al. (2022), 697 people.</p>
+  </figure>
+
+  <div class="callout"><p>The answer, in one line: <span class="m">β</span> is not a trait of the person but a reaction function — it moves with the state, and it attaches to the pairing of person and reward within a given trade-off structure.</p></div>
+  <div class="next"><a href="#vantages">Next: how β is measured <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================ 02 PLAN VS ACT === -->
+<section class="chapter" id="vantages">
+  <div class="ch-head">
+    <p class="ch-num"><b>02</b>The measuring stick</p>
+    <h2>Present bias hides in plans and shows in actions</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Asked days ahead how much to work on a future date, a person faces effort and pay that both lie in the future: <span class="m">β</span> multiplies both and cancels. The plan reveals long-run preferences.</p>
+    <p>On the day itself the effort is immediate and only the pay is discounted by <span class="m">β</span>, so the person does less than planned. The gap between the two first-order conditions is exactly log <span class="m">β</span>. Every estimate in the paper starts from this plan-versus-act wedge.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=6" target="_blank" rel="noopener">In the paper: Section 2 and Section 3.2 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 2</span></div>
+      <p class="fig-title">The plan-versus-act simulator</p>
+      <p class="fig-sub">Set the present-bias factor, the piece rate and how strongly effort responds to pay. Watch what changes, and what does not.</p>
+    </figcaption>
+    <div class="viz" data-viz="vantage"></div>
+    <p class="fig-note">Illustration with an isoelastic effort cost, where planned effort rises with the wage with elasticity <span class="m">b</span>. Advance: κ′(<span class="m">e</span><sub>plan</sub>) = δ̃<span class="m">W</span>. On the day: κ′(<span class="m">e</span><sub>act</sub>) = <span class="m">β</span>δ̃<span class="m">W</span>. Hence the log-wedge θ = log <span class="m">e</span><sub>act</sub> − log <span class="m">e</span><sub>plan</sub> = <span class="m">b</span> log <span class="m">β</span>, and <span class="m">β</span> = exp(θ / <span class="m">b</span>).</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>Measuring in this coordinate has three advantages. It is <strong>scale-free</strong>: the gap in tasks grows with the size of the plan, the log-wedge does not. It is <strong>curvature-free</strong> once each comparison shares one elasticity. And it is <strong>robust to a classic transformation bias</strong>: averaging individual ratios exp(θ̂ / <span class="m">b̂</span>) with noisy denominators inflates <span class="m">β</span> — in one dataset the naive average of individual estimates is 1.38 against a corrected 0.92.</p>
+  </div>
+  <div class="next"><a href="#axes">Next: the three axes of a choice <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================ 03 THREE AXES === -->
+<section class="chapter" id="axes">
+  <div class="ch-head">
+    <p class="ch-num"><b>03</b>The map</p>
+    <h2>Every intertemporal choice sits on three axes</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">A single <span class="m">β</span> must be the same along all three: the <strong>sign–timing structure</strong> of the trade-off, the <strong>good</strong>, and the <strong>state</strong> at the moment of choice.</p>
+    <p>The axes are independent, but existing literatures are not spread across them. Money studies sit almost entirely in reward–reward choices made in calm states; effort studies in cost–cost choices. Comparing <span class="m">β</span><sub>money</sub> with <span class="m">β</span><sub>effort</sub> therefore changes the good <em>and</em> the structure at once. The three designs in the paper each move along one axis while holding the others fixed.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 3</span></div>
+      <p class="fig-title">Where each literature and each design sits</p>
+      <p class="fig-sub">Pick a literature or a dataset to see which axis it moves along.</p>
+    </figcaption>
+    <div class="viz" data-viz="axes"></div>
+    <p class="fig-note">Structures: R–R, a reward against a later reward (a dated payment); C–C, a cost against a later cost (dated work); R⁺C⁻, a reward now and a cost later (a temptation); C⁺R⁻, a cost now and a reward later (an investment). The state is a layer inside each cell.</p>
+  </figure>
+  <div class="next"><a href="#testing">Next: what a test can and cannot tell <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================== 04 TESTING === -->
+<section class="chapter" id="testing">
+  <div class="ch-head">
+    <p class="ch-num"><b>04</b>Method</p>
+    <h2>Before the data: what can a test actually tell?</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Letting <span class="m">β</span> vary freely with the state explains any data, and so tests nothing. Empirical content comes from restricting <em>how</em> <span class="m">β</span> varies.</p>
+    <p>The paper gives a revealed-preference characterization of state-dependent quasi-hyperbolic discounting, extending Echenique, Imai and Saito (2020), and orders the possible restrictions as a ladder. Each rung is more restrictive — and more testable — than the one above it.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=7" target="_blank" rel="noopener">In the paper: Sections 2.1–2.2 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 4</span></div>
+      <p class="fig-title">The restriction ladder</p>
+      <p class="fig-sub">Select a rung: what it assumes, which test statistic can check it, and what the data say.</p>
+    </figcaption>
+    <div class="viz" data-viz="ladder"></div>
+    <p class="fig-note">Proposition 2: with one wedge statistic per state cell, Rung 0 imposes no restriction — every observed vector is rationalized exactly by some cell-specific <span class="m">β</span>. Testability hinges on how <span class="m">β</span> varies, not on whether it does.</p>
+  </figure>
+
+  <h3>Why the usual statistic misleads</h3>
+  <div class="prose">
+    <p>Heterogeneity in <span class="m">β</span> is often documented with <em>level</em> statistics: is the plan-versus-act wedge different from zero in this cell? Whenever present bias exists, the answer is yes — whether or not <span class="m">β</span> depends on the state. A valid test of state dependence must weight each decision by its assigned state <em>minus what that decision could expect</em>: a recentered function of the assigned state.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 5</span></div>
+      <p class="fig-title">A test lab: three statistics, three possible worlds</p>
+      <p class="fig-sub">Choose the true world, then run 200 simulated experiments. A good test of state dependence fires about 5% of the time when <span class="m">β</span> does not depend on the state — and often when it does.</p>
+    </figcaption>
+    <div class="viz" data-viz="testlab"></div>
+    <p class="fig-note">Simulated data, not the paper’s: 100 people, six sessions each, three decision slots per session that are hot with different probabilities (46%, 60%, 83%, as in the real design) and carry slot-specific wedges. Tests are two-sided at 5%, clustered by person. The paper’s own Monte Carlo (500 populations) finds the same: the level statistic rejects in every replication under three state-independent nulls; the recentered statistic holds size at .054, .044 and .056.</p>
+  </figure>
+
+  <h3>Recentering in one picture</h3>
+  <div class="prose">
+    <p>In Augenblick and Rabin’s design, what is randomized is the <em>order</em> of a session’s parts, not the state itself: a decision is “hot” if its block came after ten mandatory tasks. Because the session has a fixed structure, some decisions are hot far more often than others. Recentering subtracts each decision’s expected exposure μ, so that only the luck of the draw is left (Borusyak and Hull).</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 6</span></div>
+      <p class="fig-title">Exposure is unequal; recentering removes it</p>
+      <p class="fig-sub">Switch between two possible orderings of the same day, then compare the estimates before and after recentering.</p>
+    </figcaption>
+    <div class="viz" data-viz="recenter"></div>
+    <p class="fig-note">C = today’s work; F = future work; G = prediction. μ = probability that a component falls after the work block, within strata of calendar day × the day’s composition. The raw hot indicator correlates with the vantage (−0.22), the distance to the work date (+0.15) and the decision day (−0.12); after subtracting μ all three are close to zero.</p>
+  </figure>
+  <div class="next"><a href="#state">Next: the first result <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================== 05 THE STATE === -->
+<section class="chapter" id="state">
+  <div class="ch-head">
+    <p class="ch-num"><b>05</b>Result one · the state</p>
+    <h2>The state moves the act, not the plan</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Augenblick and Rabin (2019) randomized whether each of 100 people made their choices before or after a block of ten mandatory transcription tasks. Crossing that assigned state with the vantage gives a 2 × 2 design within the same people, on a common wage grid.</p>
+    <p>Just after working, people cut the effort they choose for <em>now</em>; their plans for future work do not move. Present bias rises from <span class="m">β</span> = 0.88 to 0.74. The study’s published, pooled <span class="m">β</span> is a state-weighted average of the two.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=13" target="_blank" rel="noopener">In the paper: Section 5 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 7</span></div>
+      <p class="fig-title">The hot state cuts immediate effort and leaves the plan unchanged</p>
+      <p class="fig-sub">Left: the effect of deciding just after work. Right: <span class="m">β</span> with the state held fixed. Move the slider to change how many choices are made hot, and see what a state-blind estimate would report.</p>
+    </figcaption>
+    <div class="viz" data-viz="state"></div>
+    <p class="fig-note">All 100 subjects; within-subject two-step estimates; 95% subject-bootstrap intervals (B = 499). Δ log <span class="m">β</span> = −0.180 [−0.310, −0.062], <span class="m">p</span> = .008. The pooled line is an approximation (a share-weighted average in logs); the pooled two-step estimate on the same sample is 0.80, and the published one on the original 72-subject sample is 0.83.</p>
+  </figure>
+
+  <h3>Could it be chance?</h3>
+  <div class="prose">
+    <p>Exact randomization inference keeps every choice fixed, redraws the session orderings 999 times within strata, and asks how often chance alone produces an effect as large as the one observed. No large-sample approximation and no model of the errors is needed.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 8</span></div>
+      <p class="fig-title">Randomization inference, redraw by redraw</p>
+      <p class="fig-sub">Run the redraws and watch the null distribution build up. The observed estimate is the red line.</p>
+    </figcaption>
+    <div class="viz" data-viz="ri"></div>
+    <p class="fig-note">Observed estimates, critical values and <span class="m">p</span>-values are the paper’s (all 100 subjects, recentered coefficient). The histogram is an illustration drawn with the reported null standard deviation, not the paper’s actual redraws.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p><strong>Not projection bias.</strong> A model in which people project their current state onto the future would shift plans and acts alike. Here — on the original 72-subject sample — the effect is concentrated on choices executed minutes later (−0.141 log points) and vanishes for choices about work days ahead (+0.008); the difference is significant (<span class="m">p</span> &lt; .007, and .007 after recentering). Projection bias has no scope for immediate choices, where the state at choice is the state at execution.</p>
+  </div>
+  <div class="next"><a href="#margins">Next: other margins <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================ 06 MARGINS === -->
+<section class="chapter" id="margins">
+  <div class="ch-head">
+    <p class="ch-num"><b>06</b>Result one, extended</p>
+    <h2>Where <span class="m">β</span> moves, and where it stops</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Applying the same test across other margins delivers a simple rule. <span class="m">β</span> responds where the state is <strong>assigned within a person</strong> — the visceral state, the stakes, the closeness of the date, hunger. Markers that differ <strong>across people</strong> mostly collapse once each person is compared with themselves.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=17" target="_blank" rel="noopener">In the paper: Section 5.4 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 9</span></div>
+      <p class="fig-title">Eight margins, one rule</p>
+      <p class="fig-sub">Filter by how the state varies. Each panel carries the verdict on Rung 1 (<span class="m">β</span> independent of the state).</p>
+    </figcaption>
+    <div class="viz" data-viz="margins"></div>
+    <p class="fig-note">Sources: Augenblick &amp; Rabin (2019); March &amp; Gluth (2025), 70 people fasted and sated; Schilbach (2019), rickshaw drivers in Chennai; Bessone et al. (2021), measured sleep; Cheung et al. (2022), measured appetite; Hoel et al. (2022), cash vs mobile payment, randomized across 338 people. Intervals are 95%; the stakes, proximity and sleep panels show point estimates by bin.</p>
+  </figure>
+  <div class="next"><a href="#person">Next: the person <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================ 07 THE PERSON === -->
+<section class="chapter" id="person">
+  <div class="ch-head">
+    <p class="ch-num"><b>07</b>Result two · the person</p>
+    <h2>A trait within a structure, not across</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">If <span class="m">β</span> were a personal trait, the same people would carry it from effort to money. In Augenblick, Niederle and Sprenger (2015) the same 101 people chose over both.</p>
+    <p>Individual estimates are noisy, so dispersion in them is partly sampling error. A bivariate measurement-error model separates the two, giving less weight to imprecise estimates. The result: genuine dispersion over effort, none over money. A parameter cannot be a variable in one setting and a constant in another — and no correlation can arise between a variable and a constant.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=18" target="_blank" rel="noopener">In the paper: Sections 3.3 and 6.1 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 10</span></div>
+      <p class="fig-title">Remove the noise: effort keeps its spread, money collapses to a point</p>
+      <p class="fig-sub">Each dot is a person. Slide from the raw individual estimates to what remains once sampling noise is taken out.</p>
+    </figcaption>
+    <div class="viz" data-viz="noise"></div>
+    <p class="fig-note">Simulated people drawn from the distributions the paper estimates (true s.d. of log <span class="m">β</span>: 0.24 over effort, 0.00 over money; means 0.876 and 0.987), with sampling noise of a realistic size added to each estimate. Paper: no dispersion over effort is rejected (<span class="m">p</span> &lt; 10⁻⁵, 95% interval 0.16–0.32); over money the interval is 0–0.04. The raw individual estimates are uncorrelated (+0.03).</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>Within one structure the picture flips. In Cheung et al. (2022), money, healthy snacks and unhealthy snacks are all traded off in reward–reward choices on one price grid. There, once noise is removed, the same people’s <span class="m">β</span>’s are strongly correlated across rewards.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 11</span></div>
+      <p class="fig-title">Correlated within a structure, unrelated across structures</p>
+      <p class="fig-sub">True correlation of individual <span class="m">β</span> between two rewards, after removing sampling noise.</p>
+    </figcaption>
+    <div class="viz" data-viz="corr"></div>
+    <p class="fig-note">Within structure: Cheung et al. (2022), 389–413 people per pair, 95% subject-bootstrap intervals; the raw Spearman correlations reported by the source paper are 0.47–0.60. Caveat: the three goods are elicited in the same sittings, so a shock common to the occasion can raise the correlations. Across structures: Augenblick et al. (2015), 96 people with both estimates.</p>
+  </figure>
+  <div class="next"><a href="#good">Next: the good <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================== 08 THE GOOD === -->
+<section class="chapter" id="good">
+  <div class="ch-head">
+    <p class="ch-num"><b>08</b>Result three · the good</p>
+    <h2>Money is the most present-biased reward</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Cheung et al. (2022) asked 697 high-school students to allocate money, a healthy snack and an unhealthy snack over time — same prices, same delay, same delivery, decided in advance and again on the day.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=18" target="_blank" rel="noopener">In the paper: Section 6.2 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 12</span></div>
+      <p class="fig-title">Make a prediction first</p>
+      <p class="fig-sub">Which of the three rewards shows the <em>strongest</em> present bias (the lowest <span class="m">β</span>)?</p>
+    </figcaption>
+    <div class="viz" data-viz="predict"></div>
+    <p class="fig-note">Good-specific price elasticities, within subject and within good; 95% subject-bootstrap intervals. Money − food average: −0.037, <span class="m">p</span> &lt; .004; unhealthy − healthy: +0.009, <span class="m">p</span> = .73. The ordering holds across five estimators, including an interval regression for the six-bundle choice lattice, and in both arms of the randomized presentation order.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>A commodity taxonomy does not organize these data either. Within each food, students chose one of three snacks, and <span class="m">β</span> varies across those six snack-choice groups by more than the whole money–food gap. Because the same students also chose over money, the spread can be decomposed.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 13</span></div>
+      <p class="fig-title">Within “food”, <span class="m">β</span> follows the person who chooses the snack</p>
+      <p class="fig-sub">Each marker is a snack-choice group: its <span class="m">β</span> over money (horizontal) against its <span class="m">β</span> over the chosen snack (vertical). Decompose the pattern into a person effect and a good effect.</p>
+    </figcaption>
+    <div class="viz" data-viz="snacks"></div>
+    <p class="fig-note">Marker size is proportional to group size. Cross-group standard deviation of <span class="m">β</span>: 0.033 over food, 0.034 over money for the same people; group means correlated at +0.89. The good effect of +0.036 raises food above money in all six groups and never changes sign.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>Who carries the money gap? A general impatience trait should move every reward together — and the questionnaire’s own patience measure does exactly that. Students who drink or smoke look different: their <span class="m">β</span> over money falls, while over food it barely moves. For low-income adolescents, cash is a general claim on immediate consumption that no single snack can satisfy.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 14</span></div>
+      <p class="fig-title">A trait shifts the profile; drinking and smoking tilt it toward money</p>
+      <p class="fig-sub">Move the patience slider, or switch to the groups defined by reported drinking and smoking.</p>
+    </figcaption>
+    <div class="viz" data-viz="tilt"></div>
+    <p class="fig-note">Patience: the direct self-report of impatience, from one standard deviation below to one above the mean (money +0.043 and healthy food +0.034 per s.d.). Groups: neither behaviour, 585 people; drinks, 95; smokes, 50. The money-specific gap survives subject × reward fixed effects, trait self-reports and individual covariates; in a joint regression only present bias over money predicts drinking (+0.41) and smoking (+0.51). Treated as exploratory: the Romano–Wolf adjusted <span class="m">p</span> across twelve moderators is .23.</p>
+  </figure>
+
+  <div class="callout"><p>Present bias attaches to the pair — this person, this reward — within a given trade-off structure and state, rather than to the person or the commodity alone.</p></div>
+  <div class="next"><a href="#magnitude">Next: how big is it? <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================ 09 MAGNITUDE === -->
+<section class="chapter" id="magnitude">
+  <div class="ch-head">
+    <p class="ch-num"><b>09</b>Magnitudes</p>
+    <h2>Real, bounded, and confined to a minority</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Rejecting the trait does not make the size of present bias meaningless. Within a setting, <span class="m">β</span> still summarizes the weight on the immediate component, for the states, goods and people that setting covers. Two questions remain well defined: which values can be ruled out, and how many people are present-biased.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=20" target="_blank" rel="noopener">In the paper: Section 7.1 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 15</span></div>
+      <p class="fig-title">The weaker the assumptions, the wider the answer</p>
+      <p class="fig-sub">Three ways to bound <span class="m">β</span> on two real-effort experiments, from a parametric estimate to a bracket that assumes almost nothing.</p>
+    </figcaption>
+    <div class="viz" data-viz="frameworks"></div>
+    <p class="fig-note">Parametric: the two-step estimator, isoelastic cost. Measurement-error-robust set: a monotone supply curve per person, the wage-matching identity <span class="m">e</span><sub>today</sub>(<span class="m">W</span>) = <span class="m">e</span><sub>advance</sub>(<span class="m">β</span><span class="m">W</span>), and centered measurement error (extending Aguiar &amp; Kashaev, 2021, to the quasi-hyperbolic model). Bracket: monotone supply only; by construction it cannot exclude <span class="m">β</span> = 1. Existence of present bias in Augenblick &amp; Rabin: no wage quintile has a positive wedge is rejected, <span class="m">p</span> = .004 (Cox–Shi).</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>Field data tell a complementary story. In a Spanish household consumption panel, exact tests reject exponential discounting for most households — but recorded consumption is measured with error. The paper extends a measurement-error-robust test to quasi-hyperbolic discounting, centering the error within eight groups of goods each quarter so the test keeps its power.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 16</span></div>
+      <p class="fig-title">How much measurement error does each (<span class="m">β</span>, <span class="m">δ</span>) pair need?</p>
+      <p class="fig-sub">Each cell is the average error, in % of spending in a group of goods and quarter, needed to rationalize every household. Set the error you are willing to tolerate.</p>
+    </figcaption>
+    <div class="viz" data-viz="ecpf"></div>
+    <p class="fig-note">Spanish ECPF: 185 single-person households and 2,004 couples, four consecutive quarters. The outlined region is not rejected at 5% by the measurement-error-robust test. Without measurement error every pair is rejected. This is not direct evidence of present bias: consumption paths bound <span class="m">β</span> only from above, and the test has no power against present bias of the size measured in experiments — what exponential discounting cannot absorb is the volatility of quarterly spending across groups of goods.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>Finally, how common is present bias? Using revealed and predicted choices over effort and money in Cerrone et al. (2026), the paper bounds the population share of each behavioural type, accounting for the sampling error of each measure.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 17</span></div>
+      <p class="fig-title">Most people are time-consistent; many of the rest do not see it coming</p>
+      <p class="fig-sub">Bounds on the share of each type in the population (simultaneous 95%).</p>
+    </figcaption>
+    <div class="viz" data-viz="types"></div>
+    <p class="fig-note">80 participants. Each is placed in one of eight cells by three signals (present bias over effort, over money, and whether the prediction anticipates the sign of the effort wedge); a mixing matrix gives the probability that each type lands in each cell, and a linear program bounds the shares. The bounds do not separate naïve from sophisticated types: the intervals overlap.</p>
+  </figure>
+  <div class="next"><a href="#welfare">Next: welfare <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- =================================================== 10 WELFARE === -->
+<section class="chapter" id="welfare">
+  <div class="ch-head">
+    <p class="ch-num"><b>10</b>Welfare and policy</p>
+    <h2>Most of the wedge is a surprise</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">When plan and act disagree, whose preferences count? Choices alone cannot say. The paper takes a deliberately conservative line that different normative views can share: only the part of the wedge that people <strong>fail to anticipate</strong> — the self-control gap Γ — is treated as a welfare loss.</p>
+    <p>A deviation someone sees coming (plan above act, and act equal to the forecast) is present bias, but a conflict between selves on which no welfare claim is made. This filter may miss some losses; its value is that it is not empty.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=22" target="_blank" rel="noopener">In the paper: Section 7.2 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 18</span></div>
+      <p class="fig-title">The forecast misses the wedge — in the lab and in the field</p>
+      <p class="fig-sub">Left: incentivized predictions in Augenblick &amp; Rabin, re-estimated by assigned state. Right: forecasts against outcomes in four field settings.</p>
+    </figcaption>
+    <div class="viz" data-viz="forecast"></div>
+    <p class="fig-note">Field gaps (forecast minus outcome, in points): New Year’s resolutions (Oscarsson et al., 2020); gym members’ stated chance of meeting their own attendance goal (Carrera et al., 2022); probability of working full-time past 62 (RAND HRS); sober days under incentives among rickshaw drivers (Schilbach, 2019). The errors are not attenuated by proximity, by incentives for accuracy, or by experience. Intervals approximate.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>If people misjudge their future behaviour, can demand for commitment tell us who needs help? The paper splits each person’s forecast into the part that is accurate and the part that is wrong.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 19</span></div>
+      <p class="fig-title">Commitment demand tracks the accurate part of the forecast, not its error</p>
+      <p class="fig-sub">Correlation between demand for commitment and each component, 63 rickshaw drivers; below, four further datasets.</p>
+    </figcaption>
+    <div class="viz" data-viz="commit"></div>
+    <p class="fig-note">Commitment correlated with the person’s own wedge: Carrera et al. (2022), gym; Sadoff et al. (2020), grocery delivery in food deserts; Kaur et al. (2015), data-entry workers; Allcott et al. (2022), smartphone use. Intervals approximate. Others see the bias better than we do: in Fedyk (2024) actual <span class="m">β</span> is 0.74, self-assessed 0.97, and believed for others 0.92.</p>
+  </figure>
+
+  <div class="callout"><p>The error that defines the self-control gap also disables the remedy that would correct it.</p></div>
+
+  <div class="grid3">
+    <div class="pcard"><div class="n">1</div><h4>Take-up does not screen need</h4><p>Choosing commitment reveals who already knows they need it — who is already partly in control. Declining it is not evidence of a taste for flexibility.</p></div>
+    <div class="pcard"><div class="n">2</div><h4>Use instruments that do not rely on self-forecasts</h4><p>Defaults, targets or schedules set by someone else, and incentives offered to everyone reach the gap. A target set by another person closes about 23% of it.</p></div>
+    <div class="pcard"><div class="n">3</div><h4>Design the environment</h4><p>Part of the wedge is the decision context itself: timing, state, options. Employers, schools and platforms already shape it — leaving it unstructured is a choice too.</p></div>
+  </div>
+  <div class="next"><a href="#model">Next: why it happens <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ===================================================== 11 MODEL === -->
+<section class="chapter" id="model">
+  <div class="ch-head">
+    <p class="ch-num"><b>11</b>Microfoundations</p>
+    <h2>A model in which the state sets the weights</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">In the Multi-System Control framework, a far-sighted, slow and costly <strong>deliberative</strong> system and a fast, cue-triggered, myopic <strong>impulsive</strong> system value every option in parallel. The state — cues, visceral heat, fatigue, available control — does not change what each system wants. It changes how much each one weighs.</p>
+    <p>A fast arbitrator picks the action with the highest weighted value; a slow executive can raise the deliberative weight at a cost, and can also change the state of a future decision — which is what commitment is. Present bias is then a function of the state:</p>
+    <p style="text-align:center;font-size:21px;margin:18px 0"><span class="m">β</span><sub>eff</sub>(<span class="m">X</span>) = ω<sub>D</sub>(<span class="m">X</span>) / [ ω<sub>D</sub>(<span class="m">X</span>) + ω<sub>I</sub>(<span class="m">X</span>) · π ]</p>
+    <p>where ω are the weights of the two systems and π is how much more the impulsive system values the immediate part of the reward. Standard models are special cases.</p>
+    <a class="in-paper" href="../Beyond%20The%20Trait.pdf#page=24" target="_blank" rel="noopener">In the paper: Section 8 <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 20</span></div>
+      <p class="fig-title">Play with the state: how the weights produce present bias</p>
+      <p class="fig-sub">Move the state, the available control and the immediate appeal of the reward. Then switch on the restrictions that give back the standard models.</p>
+    </figcaption>
+    <div class="viz" data-viz="msc"></div>
+    <p class="fig-note">A toy parametrization for illustration: weights are a softmax of the systems’ activations, with the impulsive activation rising with cues and heat and the deliberative one rising with executive control (whose monitor works less well in a hot state). The empirical analysis tests restrictions implied by the framework, not this particular parametrization.</p>
+  </figure>
+
+  <div class="prose" style="margin-top:28px">
+    <p>The framework also reads the money results. Cash has no visceral appeal of its own; present bias over money reflects what it can buy <em>now</em>. Where cash buys no immediate consumption — as may be the case for the university subjects of Augenblick et al. (2015) — it predicts little present bias over money and little dispersion. Where cash opens access to visceral goods — as may be the case for the adolescents who drink or smoke — it predicts more present bias over cash than over food.</p>
+  </div>
+  <div class="next"><a href="#takeaways">Next: takeaways <span aria-hidden="true">→</span></a></div>
+</section>
+
+<!-- ================================================= 12 TAKEAWAYS === -->
+<section class="chapter" id="takeaways">
+  <div class="ch-head">
+    <p class="ch-num"><b>12</b>Takeaways</p>
+    <h2>One concept, many <span class="m">β</span>’s</h2>
+  </div>
+  <div class="prose">
+    <p class="lede">Within this paper’s data alone, the “same” parameter takes values from 0.74 to 0.99 — not as noise, but as the systematic response of a reaction function to states, structures, goods and people.</p>
+  </div>
+
+  <figure class="fig">
+    <figcaption>
+      <div class="fig-head"><span class="fig-label">Figure 21</span></div>
+      <p class="fig-title">Every <span class="m">β</span> in this tour, on one line</p>
+      <p class="fig-sub">Hover or tab through the points; colours mark which axis moved.</p>
+    </figcaption>
+    <div class="viz" data-viz="landscape"></div>
+  </figure>
+
+  <div class="grid3">
+    <div class="pcard"><div class="n">1</div><h4>A conditional summary</h4><p>A single estimate of <span class="m">β</span> averages a state-dependent response over the states, goods and structures a dataset happens to sample.</p></div>
+    <div class="pcard"><div class="n">2</div><h4>Test the right restriction</h4><p>State dependence as such is untestable. Level statistics detect present bias, not its dependence on the state; recentered functions of the assigned state do.</p></div>
+    <div class="pcard"><div class="n">3</div><h4>From the person to the environment</h4><p>Most of the wedge is unforeseen and commitment demand misses it. Policy should look beyond individual targeting to the settings in which decisions are made.</p></div>
+  </div>
+
+  <div class="prose" style="margin-top:34px">
+    <p><strong>Limits and next steps.</strong> The state result is also consistent with a transient rise in task costs after work; money always appeared in the same screen position in the three-good protocol; and existing datasets limit the range of states and goods. The paper proposes designs that separate these: a factorial randomization of a consumption cue across dated trade-offs over effort and money, randomized display positions with varying uses for cash, and repeated elicitations within one structure.</p>
+  </div>
+</section>
+
+</main>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="closing-inner">
+      <blockquote>“Present bias is less a fixed property of who people are than a systematic response to the context in which they choose.”</blockquote>
+      <p class="attr">From the conclusion</p>
+      <div class="actions">
+        <a class="btn" href="../Beyond%20The%20Trait.pdf" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H7.5A2 2 0 0 0 5.5 4.5v15a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7.5z"/><path d="M14 2.5v5h4.5M9 13h6M9 16.5h4"/></svg>Read the full paper<svg class="ic ic-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 16.5 16.5 7.5"/><path d="M9.5 7.5h7v7"/></svg></a>
+        <a class="btn btn-ghost" href="../">Back to the homepage</a>
+      </div>
+      <div class="cite"><b>Cite as:</b> Facchini, A. (2026). “Beyond the Trait: Present Bias as a Reaction Function. Revealed Preference, Empirical Evidence, and State-Dependent Self-Control.” Working paper, 10 October 2026.<br>All data are public replication packages or openly distributed research datasets; no new data were collected.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span>© <span data-year>2026</span> Alessandro Facchini</span>
+    <span><a href="../">Homepage</a> &nbsp;·&nbsp; <a href="../Beyond%20The%20Trait.pdf" target="_blank" rel="noopener">Paper (PDF)</a></span>
+  </div>
+</footer>
+
+<div class="tip" role="status" aria-live="polite" data-tip></div>
+<script src="bt.js" defer></script>
+</body>
+</html>
