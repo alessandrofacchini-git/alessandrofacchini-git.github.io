@@ -53,6 +53,13 @@ Everything is in `index.html`.
 | `bt.css` | Styles (same colours and fonts as the homepage, in `:root`). |
 | `bt.js` | The figures. Each is a `VIZ.<name>` function, matched to `data-viz="<name>"` in `index.html`; its numbers sit in plain arrays at the top of the function. |
 
+- **Changing wording** — open the file, find the phrase (Ctrl+F) and retype it; nothing else needs
+  updating. Most text is in `index.html`: chapters, headings, figure titles, captions and notes, the
+  menu, the buttons at the top and bottom, the citation. Text drawn *inside* a figure — axis labels,
+  buttons and tabs inside figures, the readout boxes, the one-line explanation under a figure that
+  changes as you click, tooltips, the ladder and margin cards — is in `bt.js`. If a phrase isn't in
+  one file, it's in the other. Two rules for `bt.js`: change only the words between the quote marks,
+  and don't type a plain `"` inside a sentence (use “ ” instead). In `index.html`, write `&amp;` for `&`.
 - **Hide a figure** — delete (or comment out) its `<figure class="fig">…</figure>` block in `index.html`.
 - **Hide a chapter** — add `hidden` to its `<section class="chapter">` and remove its link from the `<nav>` list.
 - Numbers are the paper’s. Figures 5 and 10 are labelled as simulations; Figure 8’s histogram and

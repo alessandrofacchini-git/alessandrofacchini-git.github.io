@@ -1682,7 +1682,7 @@
     var c1 = h("div", { class: "controls" });
     var s1 = slider({ label: "State: calm → hot, cued", min: 0, max: 1, step: 0.01, value: st.hx, fmt: function (v) { return v < 0.34 ? "calm" : v < 0.67 ? "warm" : "hot"; }, onInput: function (v) { st.hx = v; redraw(); } });
     var s2 = slider({ label: "Executive control", min: 0, max: 1, step: 0.01, value: st.ctl, fmt: function (v) { return Math.round(v * 100) + "%"; }, onInput: function (v) { st.ctl = v; redraw(); } });
-    var s3 = slider({ label: "Immediate appeal π", min: 0.2, max: 2, step: 0.05, value: st.pi, fmt: function (v) { return v.toFixed(2); }, onInput: function (v) { st.pi = v; redraw(); } });
+    var s3 = slider({ label: "Immediate appeal of the reward, π", min: 0.2, max: 2, step: 0.05, value: st.pi, fmt: function (v) { return v.toFixed(2); }, onInput: function (v) { st.pi = v; redraw(); } });
     c1.appendChild(s1.el); c1.appendChild(s2.el); c1.appendChild(s3.el);
     var k1 = check("Switch off the impulsive system", false, function (v) { st.off = v; redraw(); });
     var k2 = check("Freeze the weights across states", false, function (v) { st.freeze = v; redraw(); });
